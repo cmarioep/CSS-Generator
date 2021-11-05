@@ -1,0 +1,5 @@
+.controls {
+    flex: 0.5;
+    height: 100vh;
+    border: 1.5px solid red;
+}
