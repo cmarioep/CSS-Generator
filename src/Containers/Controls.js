@@ -1,9 +1,9 @@
 import './Controls.css';
 
-function Controls() {
+function Controls(props) {
   return (
     <div className="controls">
-     
+      {props.children}
     </div>
   );
 }

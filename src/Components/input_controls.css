@@ -1,0 +1,11 @@
+.inputControls {
+    width: 60%;
+    aspect-ratio: 3/4;
+    border: 1px solid rebeccapurple;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.control {
+    display: flex;
+}
