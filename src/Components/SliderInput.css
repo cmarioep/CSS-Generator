@@ -1,0 +1,13 @@
+.control {
+    display: flex;
+    margin: 0.5rem 0;
+    /* border: 1px solid blue; */
+}
+
+.control__slider {
+    margin: 0 1rem;
+}
+
+.control__text {
+    width: 50px;
+}

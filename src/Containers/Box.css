@@ -1,5 +1,5 @@
 .box {
     flex: 0.5;
     height: 100vh;
-    background-color: cornsilk;
+    background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );    
 }

@@ -1,5 +1,5 @@
 import Controls from './Containers/Controls';
-import InputControls from './Components/InputControls';
+import InputControls from './Containers/InputControls';
 import Box from './Containers/Box';
 
 import './App.css';
