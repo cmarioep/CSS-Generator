@@ -1,6 +1,7 @@
 import Controls from './Containers/Controls';
 import InputControls from './Containers/InputControls';
-import Box from './Containers/Box';
+import Viewer from './Containers/Viewer';
+import Box from './Components/Box';
 
 import './App.css';
 
@@ -10,7 +11,9 @@ function App() {
         <Controls>
           <InputControls/>
         </Controls>
-        <Box />      
+        <Viewer>
+          <Box />
+        </Viewer>      
     </div>
   );
 }
