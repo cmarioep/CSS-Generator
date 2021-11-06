@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { Slider } from "@material-ui/core";
 import './SliderInput.css';
+
+import {DataContext} from '../Context/DataContext';
 
 
 function SliderInput(props) {
 
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useContext(DataContext);
 
   const SetValueHandler = (event, val) => {
-    setValue(val);
+    setValue(val );
   }
 
   return (

@@ -1,6 +1,12 @@
+import { useContext } from "react";
+import {DataContext} from '../Context/DataContext';
 import './Box.css';
 
 function Box() {
+
+    const value = useContext(DataContext);
+    console.log("Desde box")
+    console.log(value)
 
     const x = 5;
     const y = 5;
