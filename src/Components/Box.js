@@ -1,14 +1,10 @@
-import { useContext } from "react";
-import {DataContext} from '../Context/DataContext';
+import {useSelector} from 'react-redux';
 import './Box.css';
 
 function Box() {
 
-    const value = useContext(DataContext);
-    console.log("Desde box")
-    console.log(value)
+    const counter = useSelector(state => state.x);
 
-    const x = 5;
     const y = 5;
     const blur = 5;
     const spread = 5;
@@ -16,7 +12,7 @@ function Box() {
 
     return(
         <div className="box" 
-            style={{boxShadow: `${x}px ${y}px ${blur}px ${spread}px ${color} `,}}>
+            style={{boxShadow: `${counter}px ${y}px ${blur}px ${spread}px ${color} `,}}>
         </div>
     )
 };

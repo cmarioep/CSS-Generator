@@ -1,22 +1,26 @@
-import {createStore} from 'redux';
+import { createSlice, configureStore } from '@reduxjs/toolkit';
 
-const properties = 
-    {
-        x: 0,
-    }
-
-const setPropertiesReducer = (state = properties, action) => {
-
-    if (action.type === 'setX') {
-        return {
-            x: action.payload,
-        }
-    }
-    
-    return state;
-
+const values = {
+    x: 0,
 }
 
-const store = createStore(setPropertiesReducer);
+const setProperties = createSlice({
+    name: 'properties',
+    initialState: values,
+    reducers: {
+        setX(state, action) {
+            state.x= action.payload;
+        }
+    }
+});
+
+
+const store = configureStore({
+    reducer: setProperties.reducer
+});
+
+
+export const setPropertiesActions = setProperties.actions;
+
 
 export default store;
