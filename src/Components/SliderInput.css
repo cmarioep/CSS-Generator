@@ -4,10 +4,15 @@
     /* border: 1px solid blue; */
 }
 
+.control__label {
+    width: 30%;
+}
+
 .control__slider {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .control__text {
-    width: 50px;
+    width: 3rem;
+    text-align: center;
 }

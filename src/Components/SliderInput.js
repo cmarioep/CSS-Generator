@@ -1,22 +1,25 @@
-import { useContext } from "react";
+import { useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import { Slider } from "@material-ui/core";
 import './SliderInput.css';
-
-import {DataContext} from '../Context/DataContext';
+import { yellow } from "@material-ui/core/colors";
 
 
 function SliderInput(props) {
 
-  const [value, setValue] = useContext(DataContext);
+  const dispatch = useDispatch();
+  const valor = useSelector(state => state.x);
+  
 
-  const SetValueHandler = (event, val) => {
-    setValue(val );
-  }
+  const setXHandler = () => {
+    dispatch({type: 'setX'})
+  };
 
   return (
     <div className="control">
-        {props.label}: <Slider className="control__slider" min={-100} max={100} value={value} onChange={SetValueHandler}/>
-        <input className="control__text" type="text" value={value}/>
+        <span className="control__label">{props.label}:</span> 
+        <Slider className="control__slider" min={-100} max={100}  value={valor} onChange={setXHandler}/>
+        <input className="control__text" type="text" value={valor}/>
     </div>
    );
 }
