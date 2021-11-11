@@ -22,11 +22,23 @@ function SliderInput(props) {
 
   };
 
+  const setAction = (event, val) => {
+
+    if (props.label === 'x') {
+      console.log("Soy x")
+      setXHandler(event, val);
+    }
+
+
+  }
+
+
+
 
   return (
     <div className="control">
         <span className="control__label">{props.label}:</span> 
-        <Slider className="control__slider" min={-100} max={100}  value={counter} onChange={setXHandler}/>
+        <Slider className="control__slider" min={-100} max={100} value={counter} onChange={setAction} />
         <input className="control__text" type="text" value={counter}/>
     </div>
    );
