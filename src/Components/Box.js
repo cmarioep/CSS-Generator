@@ -3,16 +3,17 @@ import './Box.css';
 
 function Box() {
 
-    const counter = useSelector(state => state.x);
+    const x = useSelector(state => state.x);
+    const y = useSelector(state => state.y);
+    const blur = useSelector(state => state.blur);
+    const spread = useSelector(state => state.spread);
 
-    const y = 5;
-    const blur = 5;
-    const spread = 5;
-    const color = "blue";
+    const color = 'blue';
+
 
     return(
         <div className="box" 
-            style={{boxShadow: `${counter}px ${y}px ${blur}px ${spread}px ${color} `,}}>
+            style={{boxShadow: `${x}px ${y}px ${blur}px ${spread}px ${color} `,}}>
         </div>
     )
 };
