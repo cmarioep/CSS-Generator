@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {setPropertiesActions} from '../store/index';
 
-import { Slider } from "@material-ui/core";
 
 import './SliderInput.css';
 
@@ -18,29 +17,30 @@ function SliderInput(props) {
   const blur = useSelector(state => state.blur);
   const spread = useSelector(state => state.spread);
   let conditionalValue = 0;
-  
+
+ 
   const [localState, setLocalState] = useState();
 
-  const setXHandler = (event, val) => {
-    setLocalState(val);
+  const setXHandler = (event) => {
+    setLocalState(event.target.value);
     dispatch(setPropertiesActions.setX(localState));
 
   };
 
-  const setYHandler = (event, val) => {
-    setLocalState(val);
+  const setYHandler = (event) => {
+    setLocalState(event.target.value);
     dispatch(setPropertiesActions.setY(localState));
 
   };
 
-  const setBlurHandler = (event, val) => {
-    setLocalState(val);
+  const setBlurHandler = (event) => {
+    setLocalState(event.target.value);
     dispatch(setPropertiesActions.setBlur(localState));
 
   };
 
-  const setSpreadHandler = (event, val) => {
-    setLocalState(val);
+  const setSpreadHandler = (event) => {
+    setLocalState(event.target.value);
     dispatch(setPropertiesActions.setSpread(localState));
 
   };
@@ -69,33 +69,31 @@ function SliderInput(props) {
   setValue();
 
 
-  const setAction = (event, val) => {
+  const setAction = (event) => {
 
     if (props.label === 'x') {
-      setXHandler(event, val);
+      setXHandler(event);
     }
 
     if (props.label === 'y') {
-      setYHandler(event, val);
+      setYHandler(event);
     }
 
     if (props.label === 'Blur') {
-      setBlurHandler(event, val);
+      setBlurHandler(event);
     }
 
     if (props.label === 'Spread') {
-      setSpreadHandler(event, val);
+      setSpreadHandler(event);
     }
 
   }
 
-
-
   return (
     <div className="control">
         <span className="control__label">{props.label}:</span> 
-        <Slider className="control__slider" min={-100} max={100} defaultValue={conditionalValue} onChange={setAction} />
-        <input className="control__text" type="text" defaultValue={conditionalValue}/>
+        <input type="range" className="control__slider" min={-200} max={200} defaultValue={localState} onChange={setAction}/>
+        <span className="control__text">{conditionalValue}</span>
     </div>
    );
 }

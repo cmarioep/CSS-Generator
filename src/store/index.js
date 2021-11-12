@@ -1,10 +1,10 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const values = {
-    x: 1,
-    y: 2,
-    blur: 3,
-    spread: 4,
+    x: 0,
+    y: 0,
+    blur: 0,
+    spread: 0,
 }
 
 const setProperties = createSlice({
@@ -18,10 +18,10 @@ const setProperties = createSlice({
             state.y= action.payload;
         },
         setBlur(state, action) {
-            state.blur= action.payload;
-        },
+            state.blur= (action.payload < 0) ? 0 : action.payload;
+         },
         setSpread(state, action) {
-            state.spread= action.payload;
+            state.spread= (action.payload < 0) ? 0 : action.payload;
         }
     }
 });

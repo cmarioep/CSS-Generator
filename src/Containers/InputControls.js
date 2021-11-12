@@ -1,4 +1,4 @@
-import SliderInput from '../Components/SliderInput'
+import SliderInput from '../Components/SliderInput';
 import './InputControls.css';
 
 function InputControls() {
@@ -10,7 +10,6 @@ function InputControls() {
        <SliderInput label="y"/>
        <SliderInput label="Blur"/>
        <SliderInput label="Spread"/>
-     
     </div>
   );
 }
