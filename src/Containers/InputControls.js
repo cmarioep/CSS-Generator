@@ -5,10 +5,10 @@ function InputControls() {
 
   return (
     <div className="inputControls">
-       <h1>CSS Box Shadow Generator</h1>
+       <h1 className="inputControls__title">Box Shadow</h1>
        <SliderInput label="x" />
        <SliderInput label="y"/>
-       <SliderInput label="Blur"/>
+       <SliderInput label="Blur" minRange={0}/>
        <SliderInput label="Spread"/>
     </div>
   );

@@ -21,7 +21,7 @@ const setProperties = createSlice({
             state.blur= (action.payload < 0) ? 0 : action.payload;
          },
         setSpread(state, action) {
-            state.spread= (action.payload < 0) ? 0 : action.payload;
+            state.spread= action.payload;
         }
     }
 });

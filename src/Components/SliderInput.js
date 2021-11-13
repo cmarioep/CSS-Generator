@@ -9,7 +9,7 @@ import './SliderInput.css';
 
 function SliderInput(props) {
 
-  
+ 
   const dispatch = useDispatch();
 
   const x = useSelector(state => state.x);
@@ -92,7 +92,7 @@ function SliderInput(props) {
   return (
     <div className="control">
         <span className="control__label">{props.label}:</span> 
-        <input type="range" className="control__slider" min={-200} max={200} defaultValue={localState} onChange={setAction}/>
+        <input type="range" className="control__slider" min={props.minRange || -100} max={200} defaultValue={localState} onChange={setAction}/>
         <span className="control__text">{conditionalValue}</span>
     </div>
    );
