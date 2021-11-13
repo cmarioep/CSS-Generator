@@ -1,11 +1,8 @@
 import { useState } from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import {setPropertiesActions} from '../store/index';
-
+import { useSelector, useDispatch } from 'react-redux';
+import { setPropertiesActions } from '../store/index';
 
 import './SliderInput.css';
-
-
 
 function SliderInput(props) {
 

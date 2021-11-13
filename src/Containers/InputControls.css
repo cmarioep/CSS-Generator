@@ -13,9 +13,15 @@
 }
 
 .inputControls__title {
+    width: 100%;
     text-align: center;
     color:coral;
     margin-bottom: 2rem;
+}
+
+.inputControls__inputs__color {
+    display: flex;
+    justify-content: center;
 }
 
 
