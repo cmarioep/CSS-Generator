@@ -1,15 +1,19 @@
 .control {
     display: flex;
     margin: 0.5rem 0;
+    justify-content: space-between;
     /* border: 1px solid blue; */
 }
 
 .control__label {
-    width: 30%;
+    width: 15%;
+    /* border: 1px solid blue; */
 }
 
 .control__slider {
-    margin: 0 0.5rem;
+    width: 70%;
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
 }
 
 .control__text {
