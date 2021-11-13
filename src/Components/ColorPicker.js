@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { SketchPicker } from 'react-color';
+import { ChromePicker } from 'react-color';
 import { setPropertiesActions } from '../store/index';
 
 
@@ -14,7 +14,7 @@ const ColorPicker = () => {
     const [localState, setlocalState] = useState('#3B3939');
 
     const colorPickedHandler = (event) => {
-        setlocalState(event.hex);
+        setlocalState(event.rgb);
         dispatch(setPropertiesActions.setColor(localState));
     };
 
@@ -22,7 +22,7 @@ const ColorPicker = () => {
 
     return(
 
-        <SketchPicker color={color} onChange={ colorPickedHandler } />
+        <ChromePicker color={color} onChange={ colorPickedHandler } />
 
     );
 };

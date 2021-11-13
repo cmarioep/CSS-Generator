@@ -5,7 +5,7 @@ const values = {
     y: 0,
     blur: 0,
     spread: 0,
-    color: '#3B3939'
+    color: {r: 59, g: 57, b: 57, a:1}
 }
 
 const setProperties = createSlice({

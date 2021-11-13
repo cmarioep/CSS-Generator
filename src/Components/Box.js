@@ -11,7 +11,7 @@ function Box() {
 
     return(
         <div className="box" 
-            style={{boxShadow: `${x}px ${y}px ${blur}px ${spread}px ${color}`,}}>
+            style={{boxShadow: `${x}px ${y}px ${blur}px ${spread}px rgba(${color.r},${color.g},${color.b},${color.a})`}}>
         </div>
     )
 };

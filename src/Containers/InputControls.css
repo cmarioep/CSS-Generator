@@ -22,6 +22,7 @@
 .inputControls__inputs__color {
     display: flex;
     justify-content: center;
+    margin-top: 1.5rem;
 }
 
 
