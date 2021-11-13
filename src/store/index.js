@@ -5,6 +5,7 @@ const values = {
     y: 0,
     blur: 0,
     spread: 0,
+    color: '#3B3939'
 }
 
 const setProperties = createSlice({
@@ -22,6 +23,9 @@ const setProperties = createSlice({
          },
         setSpread(state, action) {
             state.spread= action.payload;
+        },
+        setColor(state, action) {
+            state.color= action.payload;
         }
     }
 });

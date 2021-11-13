@@ -7,13 +7,11 @@ function Box() {
     const y = useSelector(state => state.y);
     const blur = useSelector(state => state.blur);
     const spread = useSelector(state => state.spread);
-
-    const color = 'blue';
-
+    const color = useSelector(state => state.color);
 
     return(
         <div className="box" 
-            style={{boxShadow: `${x}px ${y}px ${blur}px ${spread}px ${color} `,}}>
+            style={{boxShadow: `${x}px ${y}px ${blur}px ${spread}px ${color}`,}}>
         </div>
     )
 };

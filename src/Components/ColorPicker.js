@@ -1,20 +1,28 @@
 import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { SketchPicker } from 'react-color';
+import { setPropertiesActions } from '../store/index';
 
 
 
 const ColorPicker = () => {
+
+    const dispatch = useDispatch();
+
+    const color = useSelector(state => state.color);
  
-    const [color, setColor] = useState('#3B3939');
+    const [localState, setlocalState] = useState('#3B3939');
 
     const colorPickedHandler = (event) => {
-        setColor(event.hex);
+        setlocalState(event.hex);
+        dispatch(setPropertiesActions.setColor(localState));
     };
 
+    
 
     return(
 
-        <SketchPicker color={color} onChangeComplete={ colorPickedHandler } />
+        <SketchPicker color={color} onChange={ colorPickedHandler } />
 
     );
 };
