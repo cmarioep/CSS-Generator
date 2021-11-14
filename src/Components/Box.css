@@ -1,6 +1,9 @@
 .box {
-    width: 15%;
-    aspect-ratio: 1/1;
-    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    aspect-ratio: 4/3;
+    border: 1px solid;
     background-color: cornsilk;
 }
