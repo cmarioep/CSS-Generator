@@ -6,7 +6,6 @@ function InputControls() {
 
   return (
     <div className="inputControls">
-       <h1 className="inputControls__title">Box Shadow</h1>
        <div className="inputControls__inputs">
            <div className="inputControls__inputs__sliders">
              <SliderInput label="x" />

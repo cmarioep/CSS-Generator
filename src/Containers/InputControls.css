@@ -1,5 +1,5 @@
 .inputControls {
-    width: 60%;
+    width: 40%;
     border-radius: 0.5rem;
     padding: 2rem;
 
@@ -12,11 +12,19 @@
     border-right: 2px rgba(40,40,40,0.35) solid;
 }
 
-.inputControls__title {
+
+
+.inputControls__inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: coral 1px solid; */
+}
+
+
+.inputControls__inputs__sliders {
     width: 100%;
-    text-align: center;
-    color:coral;
-    margin-bottom: 2rem;
+    /* border: red 1px solid; */
 }
 
 .inputControls__inputs__color {

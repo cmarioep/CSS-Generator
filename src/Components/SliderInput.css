@@ -1,7 +1,7 @@
 .control {
     display: flex;
     margin: 0.5rem 0;
-    justify-content: space-between;
+    justify-content: space-around;
     /* border: 1px solid blue; */
 }
 
@@ -11,7 +11,7 @@
 }
 
 .control__slider {
-    width: 70%;
+    width: 60%;
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
 }

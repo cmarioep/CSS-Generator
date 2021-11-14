@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="app">
       <DataProvider>
-        <Controls>
-          <InputControls/>
-        </Controls>
         <Viewer>
           <Box />
         </Viewer>    
+        <Controls>
+          <InputControls/>
+        </Controls>
       </DataProvider>  
     </div>
   );

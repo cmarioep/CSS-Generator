@@ -1,9 +1,9 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const values = {
-    x: 0,
-    y: 0,
-    blur: 0,
+    x: 5,
+    y: 5,
+    blur: 5,
     spread: 0,
     color: {r: 59, g: 57, b: 57, a:1}
 }
