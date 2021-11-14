@@ -1,24 +1,19 @@
-import Controls from './Containers/Controls';
-import InputControls from './Containers/InputControls';
-import Viewer from './Containers/Viewer';
-import Box from './Components/Box';
 import {DataProvider} from './Context/DataContext';
+import Layout from './Containers/Layout';
+import BoxShadow from './Pages/Box-Shadow';
 
-import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <DataProvider>
-        <Viewer>
-          <Box />
-        </Viewer>    
-        <Controls>
-          <InputControls/>
-        </Controls>
+        <Layout>
+          <BoxShadow />
+        </Layout>
       </DataProvider>  
     </div>
   );
 }
 
 export default App;
+
