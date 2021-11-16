@@ -1,5 +1,5 @@
 .inputControls {
-    width: 40%;
+    width: 45%;
     border-radius: 0.5rem;
     padding: 2rem;
 
@@ -18,13 +18,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: coral 1px solid; */
 }
 
 
 .inputControls__inputs__sliders {
-    width: 100%;
-    /* border: red 1px solid; */
+    width: 60%;
 }
 
 .inputControls__inputs__color {
