@@ -10,7 +10,7 @@ function InputControls() {
         <div className="inputControls__inputs__sliders">
           <SliderInput label="x" />
           <SliderInput label="y"/>
-          <SliderInput label="Blur" minRange={0}/>
+          <SliderInput label="Blur"/>
           <SliderInput label="Spread"/>
         </div>
         <div className="inputControls__inputs__color">

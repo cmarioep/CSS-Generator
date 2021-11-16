@@ -6,17 +6,42 @@ import './SliderInput.css';
 
 function SliderInput(props) {
 
+  let minValue = -200;
  
   const dispatch = useDispatch();
-
+  
+  let initialState;
   const x = useSelector(state => state.x);
   const y = useSelector(state => state.y);
   const blur = useSelector(state => state.blur);
   const spread = useSelector(state => state.spread);
-  let conditionalValue = 0;
+
+
+  const setInitialState = () => {
+
+    if (props.label === 'x') {
+      initialState = x;
+    }
+
+    if (props.label === 'y') {
+      initialState = y;
+    }
+
+    if (props.label === 'Blur') {
+      initialState = blur;
+      minValue = 0;
+    }
+
+    if (props.label === 'Spread') {
+      initialState = spread;
+     }
+  
+  }
+
+  setInitialState();
 
  
-  const [localState, setLocalState] = useState();
+  const [localState, setLocalState] = useState(initialState);
 
   const setXHandler = (event) => {
     setLocalState(event.target.value);
@@ -43,29 +68,6 @@ function SliderInput(props) {
   };
 
 
-  const setValue = () => {
-
-    if (props.label === 'x') {
-      conditionalValue = x;
-    }
-
-    if (props.label === 'y') {
-      conditionalValue = y;
-    }
-
-    if (props.label === 'Blur') {
-      conditionalValue = blur;
-    }
-
-    if (props.label === 'Spread') {
-      conditionalValue = spread;
-    }
-  
-  }
-
-  setValue();
-
-
   const setAction = (event) => {
 
     if (props.label === 'x') {
@@ -86,11 +88,12 @@ function SliderInput(props) {
 
   }
 
+
   return (
     <div className="control">
         <span className="control__label">{props.label}:</span> 
-        <input type="range" className="control__slider" min={props.minRange || -100} max={200} defaultValue={localState} onChange={setAction}/>
-        <span className="control__text">{conditionalValue}</span>
+        <input type="range" className="control__slider" min={minValue} max={200} value={localState} onChange={setAction}/>
+        <input type="number" className="control__text" min={minValue} max={200} value={localState} onChange={setAction} />
     </div>
    );
 }
