@@ -9,7 +9,7 @@ const ColorPicker = () => {
 
     const dispatch = useDispatch();
 
-    const color = useSelector(state => state.color);
+    const color = useSelector(state => state.box_color);
  
     const [localState, setlocalState] = useState(color);
 

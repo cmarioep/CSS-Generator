@@ -11,10 +11,10 @@ function SliderInput(props) {
   const dispatch = useDispatch();
   
   let initialState;
-  const x = useSelector(state => state.x);
-  const y = useSelector(state => state.y);
-  const blur = useSelector(state => state.blur);
-  const spread = useSelector(state => state.spread);
+  const x = useSelector(state => state.box_xOffset);
+  const y = useSelector(state => state.box_yOffset);
+  const blur = useSelector(state => state.box_blur);
+  const spread = useSelector(state => state.box_spread);
 
 
   const setInitialState = () => {

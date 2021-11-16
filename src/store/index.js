@@ -1,31 +1,31 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
-const values = {
-    x: -10,
-    y: 10,
-    blur: 0,
-    spread: 0,
-    color: {r: 59, g: 57, b: 57, a:1}
+const initialValues = {
+    box_xOffset: -10, // The horizontal offset of the box-shadow
+    box_yOffset: 10,  // The vertical offset of the box-shadow
+    box_blur: 0,
+    box_spread: 0,
+    box_color: {r: 59, g: 57, b: 57, a:1}
 }
 
 const setProperties = createSlice({
     name: 'properties',
-    initialState: values,
+    initialState: initialValues,
     reducers: {
         setX(state, action) {
-            state.x= action.payload;
+            state.box_xOffset= action.payload;
         },
         setY(state, action) {
-            state.y= action.payload;
+            state.box_yOffset= action.payload;
         },
         setBlur(state, action) {
-            state.blur= (action.payload < 0) ? 0 : action.payload;
+            state.box_blur= (action.payload < 0) ? 0 : action.payload;
          },
         setSpread(state, action) {
-            state.spread= action.payload;
+            state.box_spread= action.payload;
         },
         setColor(state, action) {
-            state.color= action.payload;
+            state.box_color= action.payload;
         }
     }
 });
