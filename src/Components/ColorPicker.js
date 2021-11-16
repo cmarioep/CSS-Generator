@@ -11,7 +11,7 @@ const ColorPicker = () => {
 
     const color = useSelector(state => state.color);
  
-    const [localState, setlocalState] = useState('#3B3939');
+    const [localState, setlocalState] = useState(color);
 
     const colorPickedHandler = (event) => {
         setlocalState(event.rgb);
@@ -22,7 +22,7 @@ const ColorPicker = () => {
 
     return(
 
-        <ChromePicker color={color} onChange={ colorPickedHandler } />
+        <ChromePicker color={localState} onChange={ colorPickedHandler } />
 
     );
 };
