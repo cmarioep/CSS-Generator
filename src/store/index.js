@@ -1,11 +1,18 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialValues = {
-    box_xOffset: -10, // The horizontal offset of the box-shadow
-    box_yOffset: 10,  // The vertical offset of the box-shadow
+    // Initial values for box-shadow
+    box_xOffset: -10,
+    box_yOffset: 10,
     box_blur: 0,
     box_spread: 0,
-    box_color: {r: 59, g: 57, b: 57, a:1}
+    box_color: {r: 59, g: 57, b: 57, a:1},
+
+    // Initial values for text-shadow
+    text_xOffset: -4,
+    text_yOffset: 4,
+    text_blur: 2,
+    text_color: {r: 219, g: 100, b: 100, a:1},
 }
 
 const setProperties = createSlice({
