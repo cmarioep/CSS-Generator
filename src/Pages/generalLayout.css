@@ -7,4 +7,6 @@
     width: 100%;
     height: 100vh;
     padding: 8vh 0 2vh 0;
+
+background-image: linear-gradient(to top, #f2f2f2, #f2f2f2, #f2f2f2, #d6d8df,  #d6d8df, #b8bfcd);
 }

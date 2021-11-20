@@ -1,9 +1,9 @@
 .viewer {
+    flex: 0.5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 40vh;
     padding: 2rem;
     /* border: 1px solid blue; */
-    /* background-image: radial-gradient( circle farthest-corner at 50.7% 54%,  rgba(204,254,152,1) 0%, rgba(229,253,190,1) 92.4% );     */
 }

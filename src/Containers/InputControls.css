@@ -1,11 +1,18 @@
 .inputControls {
     width: 45%;
     border-radius: 0.5rem;
-    padding: 2rem;
+    padding: 1rem;
 
   
-    backdrop-filter: blur(8px);
+    /* backdrop-filter: blur(8px);
     background: rgba( 33, 66, 199, 0.25 );
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid; */
+
+    backdrop-filter: blur(8px);
+    background-color: rgba(114,146,166, 0.25);
     box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
