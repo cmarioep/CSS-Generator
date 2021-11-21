@@ -2,16 +2,16 @@ import SliderInput from '../Components/SliderInput';
 import ColorPicker from '../Components/ColorPicker';
 import './InputControls.css';
 
-function InputControls() {
+function BoxShadowControls() {
 
   return (
     <div className="inputControls">
       <div className="inputControls__inputs">
         <div className="inputControls__inputs__sliders">
-          <SliderInput label="x" />
-          <SliderInput label="y"/>
-          <SliderInput label="Blur"/>
-          <SliderInput label="Spread"/>
+          <SliderInput sliderType="box-shadow" label="x" />
+          <SliderInput sliderType="box-shadow" label="y"/>
+          <SliderInput sliderType="box-shadow" label="Blur"/>
+          <SliderInput sliderType="box-shadow" label="Spread"/>
         </div>
         <div className="inputControls__inputs__color">
           <ColorPicker/>
@@ -21,5 +21,5 @@ function InputControls() {
 );
 }
 
-export default InputControls;
+export default BoxShadowControls;
 

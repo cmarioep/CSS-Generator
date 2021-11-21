@@ -19,19 +19,19 @@ const setProperties = createSlice({
     name: 'properties',
     initialState: initialValues,
     reducers: {
-        setX(state, action) {
+        setX__boxShadow(state, action) {
             state.box_xOffset= action.payload;
         },
-        setY(state, action) {
+        setY__boxShadow(state, action) {
             state.box_yOffset= action.payload;
         },
-        setBlur(state, action) {
+        setBlur__boxShadow(state, action) {
             state.box_blur= (action.payload < 0) ? 0 : action.payload;
          },
-        setSpread(state, action) {
+        setSpread__boxShadow(state, action) {
             state.box_spread= action.payload;
         },
-        setColor(state, action) {
+        setColor__boxShadow(state, action) {
             state.box_color= action.payload;
         }
     }

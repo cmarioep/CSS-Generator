@@ -1,5 +1,5 @@
 import Controls from '../Containers/Controls';
-import InputControls from '../Containers/InputControls';
+import BoxShadowControls from '../Containers/BoxShadowControls';
 import Viewer from '../Containers/Viewer';
 import Box from '../Components/Box';
 
@@ -13,7 +13,7 @@ function BoxShadow() {
                 <Box />
             </Viewer>
             <Controls>
-                <InputControls/>
+                <BoxShadowControls/>
             </Controls>
         </div>
 
