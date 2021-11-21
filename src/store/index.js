@@ -19,6 +19,7 @@ const setProperties = createSlice({
     name: 'properties',
     initialState: initialValues,
     reducers: {
+        // Actions to set text-shadow properties
         setX__boxShadow(state, action) {
             state.box_xOffset= action.payload;
         },
@@ -33,6 +34,16 @@ const setProperties = createSlice({
         },
         setColor__boxShadow(state, action) {
             state.box_color= action.payload;
+        },
+        // Actions to set text-shadow properties
+        setX__textShadow(state, action) {
+            state.text_xOffset= action.payload;
+        },
+        setY__textShadow(state, action) {
+            state.text_yOffset= action.payload;
+        },
+        setBlur__textShadow(state, action) {
+            state.text_blur= (action.payload < 0) ? 0 : action.payload;
         }
     }
 });

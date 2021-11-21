@@ -15,7 +15,7 @@ const ColorPicker = () => {
 
     const colorPickedHandler = (event) => {
         setlocalState(event.rgb);
-        dispatch(setPropertiesActions.setColor(localState));
+        dispatch(setPropertiesActions.setColor__boxShadow(localState));
     };
 
     
