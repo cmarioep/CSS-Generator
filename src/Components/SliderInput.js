@@ -112,11 +112,10 @@ function SliderInput(props) {
   };
 
 
-
-
-
+  // Conditional actions
+  
   const setAction = (event) => {
-
+    
     // Conditional actions for box-shadow properties
 
     if (props.label === 'x' && props.sliderType==="box-shadow") {
@@ -135,7 +134,7 @@ function SliderInput(props) {
       setSpreadHandler__boxShadow(event);
     }
 
-    // Conditional actions for box-shadow properties
+    // Conditional actions for text-shadow properties
 
     if (props.label === 'x' && props.sliderType==="text-shadow") {
       setXHandler__textShadow(event);

@@ -14,7 +14,7 @@ function BoxShadowControls() {
           <SliderInput sliderType="box-shadow" label="Spread"/>
         </div>
         <div className="inputControls__inputs__color">
-          <ColorPicker/>
+          <ColorPicker colorPickerType="box-shadow"/>
         </div>
     </div>
   </div>

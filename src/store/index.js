@@ -44,7 +44,10 @@ const setProperties = createSlice({
         },
         setBlur__textShadow(state, action) {
             state.text_blur= (action.payload < 0) ? 0 : action.payload;
-        }
+        },
+        setColor__textShadow(state, action) {
+            state.text_color= action.payload;
+        },
     }
 });
 
