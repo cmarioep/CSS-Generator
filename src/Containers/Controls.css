@@ -1,8 +1,8 @@
 .controls {
-    flex: 0.5;
+    width: 50%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
     /* border: indigo 1px solid; */
 }

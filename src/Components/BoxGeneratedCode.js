@@ -1,7 +1,9 @@
 import {useSelector} from 'react-redux';
-import './Box.css';
 
-function Box() {
+import './BoxGeneratedCode.css';
+
+
+const BoxGeneratedCode = () => {
 
     const xOffset = useSelector(state => state.box_xOffset);
     const yOffset = useSelector(state => state.box_yOffset);
@@ -9,12 +11,11 @@ function Box() {
     const spread = useSelector(state => state.box_spread);
     const color = useSelector(state => state.box_color);
 
-    
+    const generatedCode = `box-shadow: ${xOffset}px ${yOffset}px ${blur}px ${spread}px rgba(${color.r},${color.g},${color.b},${color.a})`
+
     return(
-        <div className="box" 
-            style={{boxShadow: `${xOffset}px ${yOffset}px ${blur}px ${spread}px rgba(${color.r},${color.g},${color.b},${color.a})`}}>
-        </div>
+        <input className="box__code" type="text" value={generatedCode}/>
     )
 };
 
-export default Box;
+export default BoxGeneratedCode;

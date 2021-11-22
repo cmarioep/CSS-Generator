@@ -9,12 +9,12 @@ import './generalLayout.css';
 function TextShadow() {
     return ( 
         <div className="layout">
-            <Viewer>
-                <TextPreview />
-            </Viewer>
             <Controls>
                 <TextShadowControls/>
             </Controls>
+            <Viewer>
+                <TextPreview />
+            </Viewer>
         </div>
 
     )

@@ -1,5 +1,5 @@
 .inputControls {
-    width: 45%;
+    width: 60%;
     border-radius: 0.5rem;
     padding: 1rem;
 
@@ -23,13 +23,14 @@
 
 .inputControls__inputs {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
 
 .inputControls__inputs__sliders {
-    width: 60%;
+    width: 100%;
 }
 
 .inputControls__inputs__color {
