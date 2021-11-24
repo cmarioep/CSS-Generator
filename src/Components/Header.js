@@ -10,6 +10,9 @@ function Header() {
                 <li>
                     <a href="/text-shadow">Text Shadow</a>
                 </li>
+                <li>
+                    <a href="/glass">Glass Morphism</a>
+                </li>
             </ul>
         </nav>
     );
