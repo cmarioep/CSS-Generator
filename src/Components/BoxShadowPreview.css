@@ -1,8 +1,4 @@
 .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
     width: 40%;
     aspect-ratio: 4/3;
     border: 1px solid;

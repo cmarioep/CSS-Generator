@@ -14,7 +14,7 @@ const BoxGeneratedCode = () => {
     const generatedCode = `box-shadow: ${xOffset}px ${yOffset}px ${blur}px ${spread}px rgba(${color.r},${color.g},${color.b},${color.a})`
 
     return(
-        <input className="boxShadow__code" type="textarea" value={generatedCode}/>
+        <input className="boxShadow__code" type="textarea" value={generatedCode} readOnly/>
     )
 };
 

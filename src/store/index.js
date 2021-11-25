@@ -13,6 +13,14 @@ const initialValues = {
     textShadow_yOffset: 4,
     textShadow_blur: 2,
     textShadow_color: {r: 219, g: 100, b: 100, a:1},
+
+    // Initial values for Glass-Morphism
+    glassMorphism_opacity: 0.369,
+    glassMorphism_border: 2,
+    glassMorphism_borderRadius: 5,
+    glassMorphism_blurFilter: 11,
+    glassMorphism_color: {r: 22, g: 101, b: 16}
+
 }
 
 const setProperties = createSlice({
