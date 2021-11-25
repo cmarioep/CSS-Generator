@@ -1,7 +1,7 @@
 import Controls from '../Containers/Controls';
 import TextShadowControls from '../Containers/TextShadowControls';
 import Viewer from '../Containers/Viewer';
-import TextPreview from '../Components/TextPreview';
+import TextShadowPreview from '../Components/TextShadowPreview';
 
 import './generalLayout.css';
 
@@ -13,7 +13,7 @@ function TextShadow() {
                 <TextShadowControls/>
             </Controls>
             <Viewer>
-                <TextPreview />
+                <TextShadowPreview />
             </Viewer>
         </div>
 

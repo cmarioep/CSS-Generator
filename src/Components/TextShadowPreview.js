@@ -2,12 +2,12 @@ import {useSelector} from 'react-redux';
 
 import './TextPreview.css'
 
-function TextPreview() {
+function TextShadowPreview() {
 
-    const xOffset = useSelector(state => state.text_xOffset);
-    const yOffset = useSelector(state => state.text_yOffset);
-    const blur = useSelector(state => state.text_blur);
-    const textColor = useSelector(state => state.text_color);
+    const xOffset = useSelector(state => state.textShadow_xOffset);
+    const yOffset = useSelector(state => state.textShadow_yOffset);
+    const blur = useSelector(state => state.textShadow_blur);
+    const textColor = useSelector(state => state.textShadow_color);
 
     console.log(`desde text ${textColor}`);
 
@@ -18,4 +18,4 @@ function TextPreview() {
     )
 };
 
-export default TextPreview;
+export default TextShadowPreview;

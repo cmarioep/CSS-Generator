@@ -1,21 +1,21 @@
 import Controls from '../Containers/Controls';
 import BoxShadowControls from '../Containers/BoxShadowControls';
 import Viewer from '../Containers/Viewer';
-import Box from '../Components/Box';
-import BoxGeneratedCode from '../Components/BoxGeneratedCode';
+import BoxShadowPreview from '../Components/BoxShadowPreview';
+import BoxShadowGeneratedCode from '../Components/BoxShadowGeneratedCode';
 
 import './generalLayout.css';
 
 
 function BoxShadow() {
-    return ( 
+    return (
         <div className="layout">
             <Controls>
-                <BoxShadowControls/>
+                <BoxShadowControls />
             </Controls>
             <Viewer>
-                <Box />
-                <BoxGeneratedCode />
+                <BoxShadowPreview />
+                <BoxShadowGeneratedCode />
             </Viewer>
         </div>
 

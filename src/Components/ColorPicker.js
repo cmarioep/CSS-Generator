@@ -10,20 +10,20 @@ const ColorPicker = (props) => {
     const dispatch = useDispatch();
 
     let initialState;
-    const box__color = useSelector(state => state.box_color);
-    const text__color = useSelector(state => state.text_color);
+    const boxShadow__color = useSelector(state => state.boxShadow_color);
+    const textShadow__color = useSelector(state => state.textShadow_color);
 
     const setInitialState = () => {
 
         // Conditional state for box-shadow color
     
         if (props.colorPickerType==="box-shadow") {
-          initialState = box__color;
+          initialState = boxShadow__color;
         }
 
         // Conditional state for text-shadow color
         if (props.colorPickerType==="text-shadow") {
-            initialState = text__color;
+            initialState = textShadow__color;
         }
       
     }

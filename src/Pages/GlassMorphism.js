@@ -1,19 +1,19 @@
 import Controls from '../Containers/Controls';
 import GlassMorphismControls from '../Containers/GlassMorphismControls';
 import Viewer from '../Containers/Viewer';
-import Box from '../Components/Box';
+import BoxShadowPreview from '../Components/BoxShadowPreview';
 
 import './generalLayout.css';
 
 
 function GlassMorphism() {
-    return ( 
+    return (
         <div className="layout">
             <Controls>
-                <GlassMorphismControls/>
+                <GlassMorphismControls />
             </Controls>
             <Viewer>
-                <Box />
+                <BoxShadowPreview />
             </Viewer>
         </div>
 

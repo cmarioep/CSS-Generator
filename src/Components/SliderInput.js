@@ -7,18 +7,18 @@ import './SliderInput.css';
 function SliderInput(props) {
 
   let minValue = -200;
- 
-  const dispatch = useDispatch();
-  
-  let initialState;
-  const box_xOffset = useSelector(state => state.box_xOffset);
-  const box_yOffset = useSelector(state => state.box_yOffset);
-  const box_blur = useSelector(state => state.box_blur);
-  const box_spread = useSelector(state => state.box_spread);
 
-  const text_xOffset = useSelector(state => state.text_xOffset);
-  const text_yOffset = useSelector(state => state.text_yOffset);
-  const text_blur = useSelector(state => state.text_blur);
+  const dispatch = useDispatch();
+
+  let initialState;
+  const boxShadow_xOffset = useSelector(state => state.boxShadow_xOffset);
+  const boxShadow_yOffset = useSelector(state => state.boxShadow_yOffset);
+  const boxShadow_blur = useSelector(state => state.boxShadow_blur);
+  const boxShadow_spread = useSelector(state => state.boxShadow_spread);
+
+  const textShadow_xOffset = useSelector(state => state.textShadow_xOffset);
+  const textShadow_yOffset = useSelector(state => state.textShadow_yOffset);
+  const textShadow_blur = useSelector(state => state.textShadow_blur);
 
 
 
@@ -26,43 +26,43 @@ function SliderInput(props) {
 
     // Conditional state for box-shadow properties
 
-    if (props.label === 'x' && props.sliderType==="box-shadow") {
-      initialState = box_xOffset;
+    if (props.label === 'x' && props.sliderType === "box-shadow") {
+      initialState = boxShadow_xOffset;
     }
 
-    if (props.label === 'y' && props.sliderType==="box-shadow") {
-      initialState = box_yOffset;
+    if (props.label === 'y' && props.sliderType === "box-shadow") {
+      initialState = boxShadow_yOffset;
     }
 
-    if (props.label === 'Blur' && props.sliderType==="box-shadow") {
-      initialState = box_blur;
+    if (props.label === 'Blur' && props.sliderType === "box-shadow") {
+      initialState = boxShadow_blur;
       minValue = 0;
     }
 
-    if (props.label === 'Spread' && props.sliderType==="box-shadow") {
-      initialState = box_spread;
-     }
-
-     // Conditional state for text-shadow properties
-
-    if (props.label === 'x' && props.sliderType==="text-shadow") {
-      initialState = text_xOffset;
+    if (props.label === 'Spread' && props.sliderType === "box-shadow") {
+      initialState = boxShadow_spread;
     }
 
-    if (props.label === 'y' && props.sliderType==="text-shadow") {
-      initialState = text_yOffset;
+    // Conditional state for text-shadow properties
+
+    if (props.label === 'x' && props.sliderType === "text-shadow") {
+      initialState = textShadow_xOffset;
     }
 
-    if (props.label === 'Blur' && props.sliderType==="text-shadow") {
-      initialState = text_blur;
+    if (props.label === 'y' && props.sliderType === "text-shadow") {
+      initialState = textShadow_yOffset;
+    }
+
+    if (props.label === 'Blur' && props.sliderType === "text-shadow") {
+      initialState = textShadow_blur;
       minValue = 0;
     }
-  
+
   }
 
   setInitialState();
 
- 
+
   const [localState, setLocalState] = useState(initialState);
 
   // Handlers to setState for box-shadow properties
@@ -113,50 +113,50 @@ function SliderInput(props) {
 
 
   // Conditional actions
-  
+
   const setAction = (event) => {
-    
+
     // Conditional actions for box-shadow properties
 
-    if (props.label === 'x' && props.sliderType==="box-shadow") {
+    if (props.label === 'x' && props.sliderType === "box-shadow") {
       setXHandler__boxShadow(event);
     }
 
-    if (props.label === 'y' && props.sliderType==="box-shadow") {
+    if (props.label === 'y' && props.sliderType === "box-shadow") {
       setYHandler__boxShadow(event);
     }
 
-    if (props.label === 'Blur' && props.sliderType==="box-shadow") {
+    if (props.label === 'Blur' && props.sliderType === "box-shadow") {
       setBlurHandler__boxShadow(event);
     }
 
-    if (props.label === 'Spread' && props.sliderType==="box-shadow") {
+    if (props.label === 'Spread' && props.sliderType === "box-shadow") {
       setSpreadHandler__boxShadow(event);
     }
 
     // Conditional actions for text-shadow properties
 
-    if (props.label === 'x' && props.sliderType==="text-shadow") {
+    if (props.label === 'x' && props.sliderType === "text-shadow") {
       setXHandler__textShadow(event);
     }
 
-    if (props.label === 'y' && props.sliderType==="text-shadow") {
+    if (props.label === 'y' && props.sliderType === "text-shadow") {
       setYHandler__textShadow(event);
     }
 
-    if (props.label === 'Blur' && props.sliderType==="text-shadow") {
+    if (props.label === 'Blur' && props.sliderType === "text-shadow") {
       setBlurHandler__textShadow(event);
     }
-}
+  }
 
 
   return (
     <div className="control">
-        <span className="control__label">{props.label}:</span> 
-        <input type="range" className="control__slider" min={minValue} max={200} value={localState} onChange={setAction}/>
-        <input type="number" className="control__text" min={minValue} max={200} value={localState} onChange={setAction} />
+      <span className="control__label">{props.label}:</span>
+      <input type="range" className="control__slider" min={minValue} max={200} value={localState} onChange={setAction} />
+      <input type="number" className="control__text" min={minValue} max={200} value={localState} onChange={setAction} />
     </div>
-   );
+  );
 }
 
 export default SliderInput;
