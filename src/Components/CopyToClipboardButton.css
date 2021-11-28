@@ -1,8 +1,8 @@
-.copyToClipboard {
+.CopyToClipboardButton {
     display: block;
     width: 50%;
     height: 40px;
     margin: 1.5rem auto 0;
     border: 2px solid slateblue;
-    border-radius: 10px;
+    border-radius: 0.5rem;
 }
