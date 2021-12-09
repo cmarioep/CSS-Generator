@@ -69,25 +69,25 @@ function SliderInput(props) {
 
   const setXHandler__boxShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setX__boxShadow(localState));
+    dispatch(setPropertiesActions.setX__boxShadow(event.target.value));
 
   };
 
   const setYHandler__boxShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setY__boxShadow(localState));
+    dispatch(setPropertiesActions.setY__boxShadow(event.target.value));
 
   };
 
   const setBlurHandler__boxShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setBlur__boxShadow(localState));
+    dispatch(setPropertiesActions.setBlur__boxShadow(event.target.value));
 
   };
 
   const setSpreadHandler__boxShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setSpread__boxShadow(localState));
+    dispatch(setPropertiesActions.setSpread__boxShadow(event.target.value));
 
   };
 
@@ -95,19 +95,19 @@ function SliderInput(props) {
 
   const setXHandler__textShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setX__textShadow(localState));
+    dispatch(setPropertiesActions.setX__textShadow(event.target.value));
 
   };
 
   const setYHandler__textShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setY__textShadow(localState));
+    dispatch(setPropertiesActions.setY__textShadow(event.target.value));
 
   };
 
   const setBlurHandler__textShadow = (event) => {
     setLocalState(event.target.value);
-    dispatch(setPropertiesActions.setBlur__textShadow(localState));
+    dispatch(setPropertiesActions.setBlur__textShadow(event.target.value));
 
   };
 
