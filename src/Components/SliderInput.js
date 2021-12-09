@@ -146,7 +146,21 @@ function SliderInput(props) {
   const setOpacityHandler__glassMorphism = (event) => {
     setLocalState(event.target.value);
     dispatch(setPropertiesActions.setOpacity__glassMorphism(event.target.value));
+  };
 
+  const  setBackdropFilterHandler__glassMorphism = (event) => {
+    setLocalState(event.target.value);
+    dispatch(setPropertiesActions.setBackdropFilter__glassMorphism(event.target.value));
+  };
+
+  const  setBorderHandler__glassMorphism = (event) => {
+    setLocalState(event.target.value);
+    dispatch(setPropertiesActions.setBorder__glassMorphism(event.target.value));
+  };
+
+  const  setBorderRadiusHandler__glassMorphism = (event) => {
+    setLocalState(event.target.value);
+    dispatch(setPropertiesActions.setBorderRadius__glassMorphism(event.target.value));
   };
 
 
@@ -185,6 +199,24 @@ function SliderInput(props) {
     if (props.label === 'Blur' && props.sliderType === "text-shadow") {
       setBlurHandler__textShadow(event);
     }
+
+    // Conditional state for glass morphism properties
+
+    if (props.label === 'Opacity' && props.sliderType === "glass-morphism") {
+      setOpacityHandler__glassMorphism(event);
+    }
+    
+    if (props.label === 'Blur' && props.sliderType === "glass-morphism") {
+      setBackdropFilterHandler__glassMorphism(event);
+    }
+    if (props.label === 'Border' && props.sliderType === "glass-morphism") {
+      setBorderHandler__glassMorphism(event);
+    }
+
+    if (props.label === 'Border radius' && props.sliderType === "glass-morphism") {
+      setBorderRadiusHandler__glassMorphism(event);
+    }
+
   }
 
 
