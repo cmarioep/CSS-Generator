@@ -20,6 +20,11 @@ function SliderInput(props) {
   const textShadow_yOffset = useSelector(state => state.textShadow_yOffset);
   const textShadow_blur = useSelector(state => state.textShadow_blur);
 
+  const opacity = useSelector(state => state.glassMorphism_opacity);
+  const blurFilter = useSelector(state => state.glassMorphism_blurFilter);
+  const border = useSelector(state => state.glassMorphism_border);
+  const borderRadius = useSelector(state => state.glassMorphism_borderRadius);
+
 
 
   const setInitialState = () => {
@@ -43,6 +48,7 @@ function SliderInput(props) {
       initialState = boxShadow_spread;
     }
 
+
     // Conditional state for text-shadow properties
 
     if (props.label === 'x' && props.sliderType === "text-shadow") {
@@ -58,12 +64,34 @@ function SliderInput(props) {
       minValue = 0;
     }
 
+    // Conditional state for glass morphism properties
+    
+    if (props.label === 'Opacity' && props.sliderType === "glass-morphism") {
+      initialState = opacity;
+      minValue = 0;
+    }
+    
+    if (props.label === 'Blur' && props.sliderType === "glass-morphism") {
+      initialState = blurFilter;
+      minValue = 0;
+    }
+    if (props.label === 'Border' && props.sliderType === "glass-morphism") {
+      initialState = border;
+      minValue = 0;
+    }
+
+    if (props.label === 'Border radius' && props.sliderType === "glass-morphism") {
+      initialState = borderRadius;
+      minValue = 0;
+    }
+
   }
 
   setInitialState();
 
 
   const [localState, setLocalState] = useState(initialState);
+
 
   // Handlers to setState for box-shadow properties
 
@@ -91,6 +119,7 @@ function SliderInput(props) {
 
   };
 
+
   // Handlers to setState for box-shadow properties
 
   const setXHandler__textShadow = (event) => {
@@ -108,6 +137,15 @@ function SliderInput(props) {
   const setBlurHandler__textShadow = (event) => {
     setLocalState(event.target.value);
     dispatch(setPropertiesActions.setBlur__textShadow(event.target.value));
+
+  };
+
+
+  // Handlers to setState for glass morphism properties
+
+  const setOpacityHandler__glassMorphism = (event) => {
+    setLocalState(event.target.value);
+    dispatch(setPropertiesActions.setOpacity__glassMorphism(event.target.value));
 
   };
 

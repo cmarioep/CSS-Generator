@@ -15,11 +15,11 @@ const initialValues = {
     textShadow_color: {r: 219, g: 100, b: 100, a:1},
 
     // Initial values for Glass-Morphism
-    glassMorphism_opacity: 0.369,
+    glassMorphism_blurFilter: 5,
+    glassMorphism_opacity: 0.075,
     glassMorphism_border: 2,
-    glassMorphism_borderRadius: 5,
-    glassMorphism_blurFilter: 11,
-    glassMorphism_color: {r: 22, g: 101, b: 16}
+    glassMorphism_borderRadius: 10,
+    glassMorphism_color: {r: 0, g: 191, b: 255}
 
 }
 
@@ -55,6 +55,20 @@ const setProperties = createSlice({
         },
         setColor__textShadow(state, action) {
             state.textShadow_color= action.payload;
+        },
+
+        // Actions to set glass morphism properties
+        setOpacity__glassMorphism(state, action) {
+            state.glassMorphism_opacity= (action.payload < 0) ? 0 : action.payload;
+        },
+        setBackdropFilter__glassMorphism(state, action) {
+            state.glassMorphism_blurFilter= (action.payload < 0) ? 0 : action.payload;
+        },
+        setBorder__glassMorphism(state, action) {
+            state.glassMorphism_border= (action.payload < 0) ? 0 : action.payload;
+        },
+        setBorderRadius__glassMorphism(state, action) {
+            state.glassMorphism_borderRadius= (action.payload < 0) ? 0 : action.payload;
         },
     }
 });
