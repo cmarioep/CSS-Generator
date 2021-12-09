@@ -1,10 +1,10 @@
-.boxShadowGenerated {
+.shadowGenerated {
     width: 50%;
     margin: 4rem;
     /* border: 1px solid red; */
 }
 
-.boxShadowGenerated__code {
+.shadowGenerated__code {
     width: 100%;
     border-radius: 5px;
     border: 0.5px solid rgb(163, 161, 161);
