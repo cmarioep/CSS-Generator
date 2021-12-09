@@ -37,14 +37,14 @@ const ColorPicker = (props) => {
 
     const colorPickerdHandler__boxShadow = (event) => {
         setlocalState(event.rgb);
-        dispatch(setPropertiesActions.setColor__boxShadow(localState));
+        dispatch(setPropertiesActions.setColor__boxShadow(event.rgb));
     };
 
     // Handlers to setState for text-shadow color
     
     const colorPickedHandler__textShadow = (event) => {
         setlocalState(event.rgb);
-        dispatch(setPropertiesActions.setColor__textShadow(localState));
+        dispatch(setPropertiesActions.setColor__textShadow(event.rgb));
     };
 
     
