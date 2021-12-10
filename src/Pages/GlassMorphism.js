@@ -2,6 +2,7 @@ import Controls from '../Containers/Controls';
 import GlassMorphismControls from '../Containers/GlassMorphismControls';
 import Viewer from '../Containers/Viewer';
 import GlassMorphismPreview from '../Components/GlassMorphismPreview';
+import GlassMorphismGeneratedCode from '../Components/GlassMorphismGeneratedCode';
 
 import './generalLayout.css';
 
@@ -14,6 +15,7 @@ function GlassMorphism() {
             </Controls>
             <Viewer>
                 <GlassMorphismPreview />
+                <GlassMorphismGeneratedCode />
             </Viewer>
         </div>
 
