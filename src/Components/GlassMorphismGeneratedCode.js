@@ -19,7 +19,7 @@ const GlassMorphismGeneratedCode = () => {
 
     return (
         <div className="shadowGenerated">
-            <textarea className="shadowGenerated__code" value={generatedCode} readOnly />
+            <textarea className="shadowGenerated__code shadowGenerated__code--texarea" rows={6} value={generatedCode} readOnly />
             <CopyToClipboardButton toCopy={generatedCode} />
         </div>
     )
