@@ -9,7 +9,7 @@ import './generalLayout.css';
 
 function GlassMorphism() {
     return (
-        <div className="layout">
+        <div className="layout layout--glassBackground">
             <Controls>
                 <GlassMorphismControls />
             </Controls>
@@ -21,6 +21,5 @@ function GlassMorphism() {
 
     )
 }
-
 
 export default GlassMorphism;

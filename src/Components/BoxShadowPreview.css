@@ -1,6 +1,6 @@
 .box {
     width: 40%;
     aspect-ratio: 4/3;
-    border: 1px solid;
+    border: 0.5px solid #6f6b76;
     background-color: #F2F2F2;
 }

@@ -20,6 +20,8 @@ function GlassMorphismPreview() {
                 borderBottom: `${border}px rgba(40,40,40,0.35) solid`,
                 borderRight: `${border}px rgba(40,40,40,0.35) solid`
             }}>
+                <h2 className="glassBox__title">Glass Morphism</h2>
+                <p className="glassBox__text">Lorem ipsum dolor sit amet.</p>
         </div>
     )
 };

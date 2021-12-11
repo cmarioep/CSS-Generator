@@ -1,6 +1,5 @@
 import Header from '../Components/Header';
 
-
 const Layout = ({children}) => {
     return(
         <div>

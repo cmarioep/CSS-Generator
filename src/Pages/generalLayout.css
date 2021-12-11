@@ -12,5 +12,12 @@
 
     /* background-image: linear-gradient(to top, #f2f2f2, #f2f2f2, #f2f2f2, #d6d8df,  #d6d8df, #b8bfcd); */
 
-    border: 1px solid blueviolet;
+    /* border: 1px solid blueviolet; */
+}
+
+
+.layout--glassBackground {
+    background-image: url(https://static.vecteezy.com/system/resources/previews/002/042/256/original/beautiful-desert-sunset-illustration-vector.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
