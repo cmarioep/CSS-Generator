@@ -7,6 +7,8 @@ import './SliderInput.css';
 function SliderInput(props) {
 
   let minValue = -200;
+  let maxValue = 200;
+  let maxStep = 1;
 
   const dispatch = useDispatch();
 
@@ -69,6 +71,8 @@ function SliderInput(props) {
     if (props.label === 'Opacity' && props.sliderType === "glass-morphism") {
       initialState = opacity;
       minValue = 0;
+      maxValue = 1;
+      maxStep = 0.001;
     }
     
     if (props.label === 'Blur' && props.sliderType === "glass-morphism") {
@@ -223,8 +227,8 @@ function SliderInput(props) {
   return (
     <div className="control">
       <span className="control__label">{props.label}:</span>
-      <input type="range" className="control__slider" min={minValue} max={200} value={localState} onChange={setAction} />
-      <input type="number" className="control__text" min={minValue} max={200} value={localState} onChange={setAction} />
+      <input type="range" className="control__slider" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
+      <input type="number" className="control__number" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
     </div>
   );
 }

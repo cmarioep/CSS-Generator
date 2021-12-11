@@ -17,8 +17,8 @@
     transition: opacity .2s;
 }
 
-.control__text {
-    width: 3rem;
+.control__number {
+    width: 3.5rem;
     height: 1.5rem;
     border: 0.5px solid #3D3535;
     border-radius: 2.5px;
