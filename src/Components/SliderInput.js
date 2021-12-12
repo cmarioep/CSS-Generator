@@ -71,22 +71,25 @@ function SliderInput(props) {
     if (props.label === 'Opacity' && props.sliderType === "glass-morphism") {
       initialState = opacity;
       minValue = 0;
-      maxValue = 1;
+      maxValue = 0.5;
       maxStep = 0.001;
     }
     
     if (props.label === 'Blur' && props.sliderType === "glass-morphism") {
       initialState = blurFilter;
       minValue = 0;
+      maxValue = 20;
     }
     if (props.label === 'Border' && props.sliderType === "glass-morphism") {
       initialState = border;
       minValue = 0;
+      maxValue = 10;
     }
 
     if (props.label === 'Border radius' && props.sliderType === "glass-morphism") {
       initialState = borderRadius;
       minValue = 0;
+      maxValue = 100;
     }
 
   }
