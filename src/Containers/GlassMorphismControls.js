@@ -14,7 +14,7 @@ function GlassMorphismControls() {
           <SliderInput sliderType="glass-morphism" label="Border radius"/>
         </div>
         <div className="inputControls__inputs__color">
-          <ColorPicker colorPickerType="text-shadow"/>
+          <ColorPicker colorPickerType="glass-morphism"/>
         </div>
     </div>
   </div>

@@ -10,20 +10,27 @@ const ColorPicker = (props) => {
     const dispatch = useDispatch();
 
     let initialState;
-    const boxShadow__color = useSelector(state => state.boxShadow_color);
-    const textShadow__color = useSelector(state => state.textShadow_color);
+    const boxShadow_color = useSelector(state => state.boxShadow_color);
+    const textShadow_color = useSelector(state => state.textShadow_color);
+    const glassMorphism_color = useSelector(state => state.glassMorphism_color);
+
 
     const setInitialState = () => {
 
         // Conditional state for box-shadow color
     
         if (props.colorPickerType==="box-shadow") {
-          initialState = boxShadow__color;
+          initialState = boxShadow_color;
         }
 
         // Conditional state for text-shadow color
         if (props.colorPickerType==="text-shadow") {
-            initialState = textShadow__color;
+            initialState = textShadow_color;
+        }
+
+        // Conditional state for glass background-color
+        if (props.colorPickerType==="glass-morphism") {
+            initialState = glassMorphism_color;
         }
       
     }
@@ -47,6 +54,13 @@ const ColorPicker = (props) => {
         dispatch(setPropertiesActions.setColor__textShadow(event.rgb));
     };
 
+    // Handlers to setState for glass background-color
+    
+    const colorPickedHandler__glassMorphism = (event) => {
+        setlocalState(event.rgb);
+        dispatch(setPropertiesActions.setColor__glassMorphism(event.rgb));
+    };
+
     
     // Conditional actions
 
@@ -62,6 +76,12 @@ const ColorPicker = (props) => {
     
         if (props.colorPickerType==="text-shadow") {
             colorPickedHandler__textShadow(event);
+        }
+
+        // Conditional actions for glass background-color
+    
+        if (props.colorPickerType==="glass-morphism") {
+            colorPickedHandler__glassMorphism(event);
         }
 
     }

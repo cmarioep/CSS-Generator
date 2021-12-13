@@ -70,6 +70,9 @@ const setProperties = createSlice({
         setBorderRadius__glassMorphism(state, action) {
             state.glassMorphism_borderRadius= (action.payload < 0) ? 0 : action.payload;
         },
+        setColor__glassMorphism(state, action) {
+            state.glassMorphism_color= action.payload;
+        }
     }
 });
 
