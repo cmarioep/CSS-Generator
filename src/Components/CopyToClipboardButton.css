@@ -3,6 +3,20 @@
     width: 50%;
     height: 40px;
     margin: 1.5rem auto 0;
-    border: 2px solid slateblue;
+    border: 1px solid slateblue;
     border-radius: 0.5rem;
+    border-color:rgba(88, 62, 130, 1);
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    border-bottom-left-radius:6px;
+    border-bottom-right-radius:6px;
+    color:rgba(255, 255, 255, 1);
+    font-weight:bold;
+    background:linear-gradient(rgba(217, 185, 233, 1), rgba(88, 62, 130, 1));
+    cursor: pointer;
 }
+
+  
+  .CopyToClipboardButton:hover {
+    background: linear-gradient(rgba(88, 62, 130, 1), rgba(217, 185, 233, 1));
+  }
