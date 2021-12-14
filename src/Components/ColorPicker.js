@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { ChromePicker } from 'react-color';
 import { setPropertiesActions } from '../store/index';
 
+import './Controls.css';
 
 
 const ColorPicker = (props) => {
@@ -86,9 +87,13 @@ const ColorPicker = (props) => {
 
     }
 
-
+   
     return(
-        <ChromePicker color={localState} onChange={ setAction } />
+        <div>
+            <span className="control__label">{props.label}:</span>
+            <div  style={{backgroundColor: `rgba(${localState.r},${localState.g},${localState.b},${localState.a})`, width: `50px`, height: `25px`, border: `0.5px solid #3D3535`}}></div>
+            <ChromePicker color={localState} onChange={ setAction } />
+        </div>
     );
 };
 

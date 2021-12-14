@@ -8,12 +8,12 @@ function TextShadowControls() {
     <div className="inputControls">
       <div className="inputControls__inputs">
         <div className="inputControls__inputs__sliders">
-          <SliderInput sliderType="text-shadow" label="x" />
-          <SliderInput sliderType="text-shadow" label="y"/>
+          <SliderInput sliderType="text-shadow" label="X-Offset" />
+          <SliderInput sliderType="text-shadow" label="Y-Offset"/>
           <SliderInput sliderType="text-shadow" label="Blur"/>
         </div>
         <div className="inputControls__inputs__color">
-          <ColorPicker colorPickerType="text-shadow"/>
+          <ColorPicker colorPickerType="text-shadow" label="Shadow Color"/>
         </div>
     </div>
   </div>

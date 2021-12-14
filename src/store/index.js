@@ -19,7 +19,7 @@ const initialValues = {
     glassMorphism_opacity: 0.075,
     glassMorphism_border: 2,
     glassMorphism_borderRadius: 10,
-    glassMorphism_color: {r: 0, g: 191, b: 255}
+    glassMorphism_color: {r: 22, g: 163, b: 211, a:1}
 
 }
 

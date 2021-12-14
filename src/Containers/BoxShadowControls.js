@@ -8,13 +8,13 @@ function BoxShadowControls() {
     <div className="inputControls">
       <div className="inputControls__inputs">
         <div className="inputControls__inputs__sliders">
-          <SliderInput sliderType="box-shadow" label="x" />
-          <SliderInput sliderType="box-shadow" label="y"/>
+          <SliderInput sliderType="box-shadow" label="X-Offset" />
+          <SliderInput sliderType="box-shadow" label="Y-Offset"/>
           <SliderInput sliderType="box-shadow" label="Blur"/>
           <SliderInput sliderType="box-shadow" label="Spread"/>
         </div>
         <div className="inputControls__inputs__color">
-          <ColorPicker colorPickerType="box-shadow"/>
+          <ColorPicker colorPickerType="box-shadow" label="Shadow Color"/>
         </div>
     </div>
   </div>

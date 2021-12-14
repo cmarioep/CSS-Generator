@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPropertiesActions } from '../store/index';
 
-import './SliderInput.css';
+import './Controls.css';
 
 function SliderInput(props) {
 
@@ -33,11 +33,11 @@ function SliderInput(props) {
 
     // Conditional state for box-shadow properties
 
-    if (props.label === 'x' && props.sliderType === "box-shadow") {
+    if (props.label === 'X-Offset' && props.sliderType === "box-shadow") {
       initialState = boxShadow_xOffset;
     }
 
-    if (props.label === 'y' && props.sliderType === "box-shadow") {
+    if (props.label === 'Y-Offset' && props.sliderType === "box-shadow") {
       initialState = boxShadow_yOffset;
     }
 
@@ -53,11 +53,11 @@ function SliderInput(props) {
 
     // Conditional state for text-shadow properties
 
-    if (props.label === 'x' && props.sliderType === "text-shadow") {
+    if (props.label === 'X-Offset' && props.sliderType === "text-shadow") {
       initialState = textShadow_xOffset;
     }
 
-    if (props.label === 'y' && props.sliderType === "text-shadow") {
+    if (props.label === 'Y-Offset' && props.sliderType === "text-shadow") {
       initialState = textShadow_yOffset;
     }
 
@@ -177,11 +177,11 @@ function SliderInput(props) {
 
     // Conditional actions for box-shadow properties
 
-    if (props.label === 'x' && props.sliderType === "box-shadow") {
+    if (props.label === 'X-Offset' && props.sliderType === "box-shadow") {
       setXHandler__boxShadow(event);
     }
 
-    if (props.label === 'y' && props.sliderType === "box-shadow") {
+    if (props.label === 'Y-Offset' && props.sliderType === "box-shadow") {
       setYHandler__boxShadow(event);
     }
 
@@ -195,11 +195,11 @@ function SliderInput(props) {
 
     // Conditional actions for text-shadow properties
 
-    if (props.label === 'x' && props.sliderType === "text-shadow") {
+    if (props.label === 'X-Offset' && props.sliderType === "text-shadow") {
       setXHandler__textShadow(event);
     }
 
-    if (props.label === 'y' && props.sliderType === "text-shadow") {
+    if (props.label === 'Y-Offset' && props.sliderType === "text-shadow") {
       setYHandler__textShadow(event);
     }
 
