@@ -86,13 +86,22 @@ const ColorPicker = (props) => {
         }
 
     }
+    
+    // Hadler to show or hide the colorPicker
 
+    const [toogle, setToogle] = useState(false);
+
+    const setToogleHandler = () => {
+        setToogle(!toogle);
+    }
    
     return(
         <div>
-            <span className="control__label">{props.label}:</span>
-            <div  style={{backgroundColor: `rgba(${localState.r},${localState.g},${localState.b},${localState.a})`, width: `50px`, height: `25px`, border: `0.5px solid #3D3535`}}></div>
-            <ChromePicker color={localState} onChange={ setAction } />
+            <div>
+                <span className="control__label">{props.label}:</span>
+                <div  onClick={setToogleHandler} style={{backgroundColor: `rgba(${localState.r},${localState.g},${localState.b},${localState.a})`, width: `50px`, height: `25px`, border: `0.5px solid #3D3535`}}></div>
+            </div>
+            {toogle && <ChromePicker color={localState} onChange={ setAction } /> }
         </div>
     );
 };
