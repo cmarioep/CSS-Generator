@@ -1,9 +1,23 @@
 .control {
+    position: relative;
     display: flex;
     margin: 0.5rem 0;
     justify-content: space-around;
     align-items: center;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
+}
+
+.control__colorPicker {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+}
+
+
+.control--colorPicker {
+    width: 150px;
+    margin: 0;
+    background-color: hotpink;
 }
 
 .control__label {

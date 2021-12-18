@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ChromePicker } from 'react-color';
 import { setPropertiesActions } from '../store/index';
@@ -88,20 +88,40 @@ const ColorPicker = (props) => {
     }
     
     // Hadler to show or hide the colorPicker
-
     const [toogle, setToogle] = useState(false);
 
     const setToogleHandler = () => {
         setToogle(!toogle);
-    }
+     }
+     
+    let colorWrapper = useRef(null);
+
+    useEffect(() => {
+
+        // If the color picker is open and the clicked target is not within the picker, then close the menu
+         const clickOutsideHandler = (event) => {
+            if (colorWrapper.current && !colorWrapper.current.contains(event.target)) {
+            //   props.onClickOutside && props.onClickOutside();
+              setToogle(false);
+            }
+        };
+
+        document.addEventListener('click', clickOutsideHandler);
+
+        return () => {
+            // Cleanup the event listener
+            document.removeEventListener('click', clickOutsideHandler);
+        };
+    });
+
    
     return(
-        <div>
-            <div>
+        <div ref={colorWrapper}>
+            <div className="control control--colorPicker">
                 <span className="control__label">{props.label}:</span>
-                <div  onClick={setToogleHandler} style={{backgroundColor: `rgba(${localState.r},${localState.g},${localState.b},${localState.a})`, width: `50px`, height: `25px`, border: `0.5px solid #3D3535`}}></div>
+                <div  onClick={setToogleHandler} style={{backgroundColor: `rgba(${localState.r},${localState.g},${localState.b},${localState.a})`, width: `40px`, height: `25px`, border: `0.5px solid #3D3535`}}></div>
+                {toogle && <ChromePicker className="control__colorPicker" color={localState} onChange={ setAction } /> }
             </div>
-            {toogle && <ChromePicker color={localState} onChange={ setAction } /> }
         </div>
     );
 };

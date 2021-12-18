@@ -13,6 +13,7 @@ function TextShadowControls() {
           <SliderInput sliderType="text-shadow" label="Blur"/>
         </div>
         <div className="inputControls__inputs__color">
+          <ColorPicker colorPickerType="text-shadow" label="text Color"/>
           <ColorPicker colorPickerType="text-shadow" label="Shadow Color"/>
         </div>
     </div>

@@ -16,8 +16,8 @@ function BoxShadowControls() {
         <div className="inputControls__inputs__color">
           <ColorPicker colorPickerType="box-shadow" label="Shadow Color"/>
         </div>
+      </div>
     </div>
-  </div>
 );
 }
 

@@ -17,6 +17,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid red;
 }
 
 
@@ -26,9 +27,10 @@
 
 
 .inputControls__inputs__color {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-top: 1.5rem;
+    /* justify-content: center; */
+    border: 1px solid green;
 }
 
 
