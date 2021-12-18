@@ -98,14 +98,14 @@ const ColorPicker = (props) => {
 
     useEffect(() => {
 
-        // If the color picker is open and the clicked target is not within the picker, then close the menu
+        // If the color picker is open and the clicked target is not within the picker, then close the picker
          const clickOutsideHandler = (event) => {
             if (colorWrapper.current && !colorWrapper.current.contains(event.target)) {
-            //   props.onClickOutside && props.onClickOutside();
               setToogle(false);
             }
         };
 
+        // Bind the event listener
         document.addEventListener('click', clickOutsideHandler);
 
         return () => {
