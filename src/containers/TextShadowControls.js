@@ -11,6 +11,7 @@ function TextShadowControls() {
         <Slider sliderType="text-shadow" label="Y-Offset" />
         <Slider sliderType="text-shadow" label="Blur" />
       </div>
+      <hr/>
       <div className="inputControls__colorPicker">
         <ColorPicker colorPickerType="text-shadow" label="text Color" />
         <ColorPicker colorPickerType="text-shadow" label="Shadow Color" />

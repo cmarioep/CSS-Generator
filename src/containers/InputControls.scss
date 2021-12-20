@@ -15,8 +15,10 @@
     }
 
     &__colorPicker {
-        width: 100%;
         display: flex;
         justify-content: space-between;
+        
+        width: 100%;
+        margin: 0.8rem 0;
     }
 }
