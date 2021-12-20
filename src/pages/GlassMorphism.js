@@ -1,8 +1,8 @@
-import Controls from '../Containers/Controls';
-import GlassMorphismControls from '../Containers/GlassMorphismControls';
-import Viewer from '../Containers/Viewer';
-import GlassMorphismPreview from '../Components//previews/GlassMorphismPreview';
-import GlassMorphismGeneratedCode from '../Components/generatedCode/GlassMorphismGeneratedCode';
+import Controls from '../containers/Controls';
+import GlassMorphismControls from '../containers/GlassMorphismControls';
+import Viewer from '../containers/Viewer';
+import GlassMorphismPreview from '../components//previews/GlassMorphismPreview';
+import GlassMorphismGeneratedCode from '../components/generatedCode/GlassMorphismGeneratedCode';
 
 import './generalLayout.scss';
 

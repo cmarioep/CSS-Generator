@@ -1,8 +1,8 @@
-import Controls from '../Containers/Controls';
-import TextShadowControls from '../Containers/TextShadowControls';
-import Viewer from '../Containers/Viewer';
-import TextShadowPreview from '../Components//previews/TextShadowPreview';
-import TextShadowGeneratedCode from '../Components/generatedCode/TextShadowGeneratedCode';
+import Controls from '../containers/Controls';
+import TextShadowControls from '../containers/TextShadowControls';
+import Viewer from '../containers/Viewer';
+import TextShadowPreview from '../components//previews/TextShadowPreview';
+import TextShadowGeneratedCode from '../components/generatedCode/TextShadowGeneratedCode';
 
 import './generalLayout.scss';
 

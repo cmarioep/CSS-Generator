@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './Containers/Layout';
-import BoxShadow from './Pages/BoxShadow';
-import TextShadow from './Pages/TextShadow';
-import GlassMorphism from './Pages/GlassMorphism';
+import Layout from './containers/Layout';
+import BoxShadow from './pages/BoxShadow';
+import TextShadow from './pages/TextShadow';
+import GlassMorphism from './pages/GlassMorphism';
 
 
 function App() {

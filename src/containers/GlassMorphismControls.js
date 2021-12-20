@@ -1,5 +1,5 @@
-import Slider from '../Components/controls/Slider';
-import ColorPicker from '../Components/controls/ColorPicker';
+import Slider from '../components/controls/Slider';
+import ColorPicker from '../components/controls/ColorPicker';
 import './InputControls.scss';
 
 function GlassMorphismControls() {

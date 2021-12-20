@@ -1,8 +1,8 @@
-import Controls from '../Containers/Controls';
-import BoxShadowControls from '../Containers/BoxShadowControls';
-import Viewer from '../Containers/Viewer';
-import BoxShadowPreview from '../Components/previews/BoxShadowPreview';
-import BoxShadowGeneratedCode from '../Components/generatedCode/BoxShadowGeneratedCode';
+import Controls from '../containers/Controls';
+import BoxShadowControls from '../containers/BoxShadowControls';
+import Viewer from '../containers/Viewer';
+import BoxShadowPreview from '../components/previews/BoxShadowPreview';
+import BoxShadowGeneratedCode from '../components/generatedCode/BoxShadowGeneratedCode';
 
 import './generalLayout.scss';
 
