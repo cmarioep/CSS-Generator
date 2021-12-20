@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux';
-import './GlassMorphismPreview.css';
+import './Previews.scss';
 
 function GlassMorphismPreview() {
 

@@ -1,5 +1,5 @@
 import {useSelector} from 'react-redux';
-import './BoxShadowPreview.css';
+import './Previews.scss';
 
 function BoxShadowPreview() {
 
@@ -11,7 +11,7 @@ function BoxShadowPreview() {
 
     
     return(
-        <div className="box" 
+        <div className="boxShadow" 
             style={{boxShadow: `${xOffset}px ${yOffset}px ${blur}px ${spread}px rgba(${color.r},${color.g},${color.b},${color.a})`}}>
         </div>
     )

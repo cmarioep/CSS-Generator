@@ -1,0 +1,37 @@
+.boxShadow {
+    width: 40%;
+    aspect-ratio: 4/3;
+    border: 0.5px solid #6f6b76;
+    background-color: #F2F2F2;
+}
+
+
+.texShadow {
+    font-size: 6rem;
+}
+
+
+.glassBox {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 55%;
+    aspect-ratio: 16/10;
+
+    &__title {
+        color: ghostwhite;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    &__text {
+        width: 90%;
+    
+        text-align: center;
+        color: ghostwhite;
+        font-size: 1rem;
+        font-weight: 350;
+    }
+}

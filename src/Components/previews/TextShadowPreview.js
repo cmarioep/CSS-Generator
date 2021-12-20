@@ -1,6 +1,6 @@
 import {useSelector} from 'react-redux';
 
-import './TextPreview.css'
+import './Previews.scss';
 
 function TextShadowPreview() {
 
@@ -11,7 +11,7 @@ function TextShadowPreview() {
     
 
     return(
-        <h1 className="textPreview" style={{textShadow: `${xOffset}px ${yOffset}px ${blur}px rgba(${textColor.r},${textColor.g},${textColor.b},${textColor.a})`}}>
+        <h1 className="texShadow" style={{textShadow: `${xOffset}px ${yOffset}px ${blur}px rgba(${textColor.r},${textColor.g},${textColor.b},${textColor.a})`}}>
             Preview
         </h1>
     )
