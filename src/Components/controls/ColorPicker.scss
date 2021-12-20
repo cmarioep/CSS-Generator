@@ -1,0 +1,26 @@
+
+.colorPicker {
+    position: relative;
+    width: 48%;
+
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        &__label {
+            color: ghostwhite;
+            font-weight: 700;
+            text-shadow: 0px 2px 5px rgb(68, 58, 70);
+        }
+    }
+        
+
+    &__picker {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+    }
+}

@@ -17,7 +17,6 @@
     &__colorPicker {
         width: 100%;
         display: flex;
-        /* justify-content: center; */
-        border: 1px solid green;
+        justify-content: space-between;
     }
 }

@@ -1,5 +1,5 @@
-import SliderInput from '../Components/SliderInput';
-import ColorPicker from '../Components/ColorPicker';
+import Slider from '../Components/controls/Slider';
+import ColorPicker from '../Components/controls/ColorPicker';
 import './InputControls.scss';
 
 function TextShadowControls() {
@@ -7,9 +7,9 @@ function TextShadowControls() {
   return (
     <div className="inputControls">
       <div className="inputControls__slider">
-        <SliderInput sliderType="text-shadow" label="X-Offset" />
-        <SliderInput sliderType="text-shadow" label="Y-Offset" />
-        <SliderInput sliderType="text-shadow" label="Blur" />
+        <Slider sliderType="text-shadow" label="X-Offset" />
+        <Slider sliderType="text-shadow" label="Y-Offset" />
+        <Slider sliderType="text-shadow" label="Blur" />
       </div>
       <div className="inputControls__colorPicker">
         <ColorPicker colorPickerType="text-shadow" label="text Color" />

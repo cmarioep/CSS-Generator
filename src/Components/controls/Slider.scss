@@ -1,0 +1,35 @@
+.slider {
+    display: flex;
+    margin: 0.8rem 0;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+
+
+    &__label {
+        width: 25%;
+        color: ghostwhite;
+        font-weight: 700;
+        text-shadow: 0px 2px 5px rgb(68, 58, 70);
+    }
+
+    
+    &__range {
+        width: 60%;
+        margin: 0 1rem;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    &__number {
+        width: 3.5rem;
+        height: 1.5rem;
+        border: 0.5px solid #3D3535;
+        border-radius: 2.5px;
+        text-align: center;
+    }
+}
+
+
+

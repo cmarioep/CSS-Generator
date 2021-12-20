@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setPropertiesActions } from '../store/index';
+import { setPropertiesActions } from '../../store/index';
 
-import './Controls.css';
+import './Slider.scss';
 
-function SliderInput(props) {
+function Slider(props) {
 
   let minValue = -200;
   let maxValue = 200;
@@ -228,12 +228,12 @@ function SliderInput(props) {
 
 
   return (
-    <div className="control">
-      <span className="control__label">{props.label}:</span>
-      <input type="range" className="control__slider" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
-      <input type="number" className="control__number" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
+    <div className="slider">
+      <span className="slider__label">{props.label}:</span>
+      <input type="range" className="slider__range" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
+      <input type="number" className="slider__number" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
     </div>
   );
 }
 
-export default SliderInput;
+export default Slider;
