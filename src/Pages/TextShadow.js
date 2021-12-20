@@ -4,7 +4,7 @@ import Viewer from '../Containers/Viewer';
 import TextShadowPreview from '../Components/TextShadowPreview';
 import TextShadowGeneratedCode from '../Components/TextShadowGeneratedCode';
 
-import './generalLayout.css';
+import './generalLayout.scss';
 
 
 function TextShadow() {

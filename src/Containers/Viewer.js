@@ -1,4 +1,4 @@
-import './Viewer.css';
+import './Viewer.scss';
 
 function Viewer(props) {
   return (
