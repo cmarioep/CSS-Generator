@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 
-import CopyToClipboardButton from '../Components/CopyToClipboardButton';
+import CopyToClipboardButton from '../buttons/CopyToClipboardButton';
 
-import './CopyToClipboardButton.css';
-import './ShadowGeneratedCode.css';
+import '../buttons/CopyToClipboardButton.css';
+import './GeneratedCode.scss';
 
 
 const BoxGeneratedCode = () => {
@@ -17,8 +17,8 @@ const BoxGeneratedCode = () => {
 
 
     return (
-        <div className="shadowGenerated">
-            <input className="shadowGenerated__code" type="textarea" value={generatedCode} readOnly />
+        <div className="generatedCode">
+            <input className="generatedCode__code" type="textarea" value={generatedCode} readOnly />
             <CopyToClipboardButton toCopy={generatedCode} />
         </div>
     )

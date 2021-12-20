@@ -1,4 +1,4 @@
-import './Controls.css';
+import './Controls.scss';
 
 function Controls(props) {
   return (

@@ -1,0 +1,20 @@
+.generatedCode {
+    width: 50%;
+    margin: 4rem;
+    /* border: 1px solid red; */
+
+    &__code {
+        width: 100%;
+        border-radius: 5px;
+        border: 2px solid #583e82;
+        padding: 0.5rem;
+        resize: none;
+        text-align: center;
+
+        &--texarea {
+            width: 105%;
+            resize: none;
+            text-align: left;
+        }
+    }
+}
