@@ -13,7 +13,7 @@ function TextShadowControls() {
       </div>
       <hr/>
       <div className="inputControls__colorPicker">
-        <ColorPicker colorPickerType="text-shadow" label="text Color" />
+        <ColorPicker colorPickerType="text-color" label="Text Color" />
         <ColorPicker colorPickerType="text-shadow" label="Shadow Color" />
       </div>
     </div>

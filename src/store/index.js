@@ -9,10 +9,11 @@ const initialValues = {
     boxShadow_color: {r: 59, g: 57, b: 57, a:1},
 
     // Initial values for text-shadow
+    textShadow_textColor: {r: 0, g: 0, b: 0, a:1},
     textShadow_xOffset: -4,
     textShadow_yOffset: 4,
     textShadow_blur: 2,
-    textShadow_color: {r: 219, g: 100, b: 100, a:1},
+    textShadow_shadowColor: {r: 219, g: 100, b: 100, a:1},
 
     // Initial values for Glass-Morphism
     glassMorphism_blurFilter: 5,
@@ -43,6 +44,7 @@ const setProperties = createSlice({
         setColor__boxShadow(state, action) {
             state.boxShadow_color= action.payload;
         },
+
         // Actions to set text-shadow properties
         setX__textShadow(state, action) {
             state.textShadow_xOffset= action.payload;
@@ -53,8 +55,11 @@ const setProperties = createSlice({
         setBlur__textShadow(state, action) {
             state.textShadow_blur= (action.payload < 0) ? 0 : action.payload;
         },
-        setColor__textShadow(state, action) {
-            state.textShadow_color= action.payload;
+        setTextColor__textShadow(state, action) {
+            state.textShadow_textColor= action.payload;
+        },
+        setShadowColor__textShadow(state, action) {
+            state.textShadow_shadowColor= action.payload;
         },
 
         // Actions to set glass morphism properties
