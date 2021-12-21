@@ -1,5 +1,7 @@
+@use '../styles/utils/mixins' as *;
+
 .inputControls {
-    width: 60%;
+    width: 90%;
     border-radius: 0.5rem;
     padding: 1rem;
 
@@ -9,6 +11,11 @@
     border: 2px rgba(255,255,255,0.4) solid;
     border-bottom: 2px rgba(40,40,40,0.35) solid;
     border-right: 2px rgba(40,40,40,0.35) solid;
+
+    @include mq(intermediate) {
+        width: 60%;
+    }
+
 
     &__slider {
         width: 100%;

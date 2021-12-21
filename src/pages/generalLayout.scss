@@ -1,5 +1,9 @@
+@use '../styles/utils/mixins' as *;
+
+
 .layout {
     display: flex;
+    flex-direction: column;
     overflow: hidden;
 
     width: 100%;
@@ -7,6 +11,10 @@
     padding: 8vh 0 0;
 
     background-image: linear-gradient(to bottom, #845ec2, #a77ed0, #c6a1de, #e2c5ee, #fbeaff);
+    
+    @include mq(medium) {
+        flex-direction: row;
+    }
     
 
     &--glassBackground {
