@@ -1,7 +1,15 @@
+@use '../../styles/utils/mixins' as *;
+
+
 .generatedCode {
-    width: 50%;
-    margin: 4rem;
-    /* border: 1px solid red; */
+    width: 90%;
+    margin: 1.5rem;
+    // border: 1px solid red;
+
+    @include mq(intermediate) {
+        width: 60%;
+        margin: 4rem;
+    }
 
     &__code {
         width: 100%;
@@ -12,9 +20,13 @@
         text-align: center;
 
         &--texarea {
-            width: 105%;
+            width: 100%;
             resize: none;
             text-align: left;
+
+            @include mq(medium) {
+                width: 105%;
+            }
         }
     }
 }

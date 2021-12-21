@@ -1,7 +1,15 @@
+@use '../styles/utils/mixins' as *;
+
+
 .controls {
-    flex: 0.5;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    flex: 0.4;
+    height: 100vh;
+
+    @include mq(intermediate) {
+        flex: 0.5;
+    }
 }
