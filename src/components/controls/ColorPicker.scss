@@ -1,3 +1,4 @@
+@use '../../styles/utils/variables' as *;
 
 .colorPicker {
     position: relative;
@@ -11,7 +12,7 @@
 
 
         &__label {
-            color: ghostwhite;
+            color: $white;
             font-weight: 700;
             text-shadow: 0px 2px 5px rgb(68, 58, 70);
         }

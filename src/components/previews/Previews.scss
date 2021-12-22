@@ -1,3 +1,4 @@
+@use '../../styles/utils/variables' as *;
 @use '../../styles/utils/mixins' as *;
 
 
@@ -5,7 +6,7 @@
     width: 50%;
     aspect-ratio: 4/3;
     border: 0.5px solid #6f6b76;
-    background-color: #F2F2F2;
+    background-color: $white;
 
     @include mq(intermediate) {
         width: 40%;
@@ -32,7 +33,7 @@
     }
 
     &__title {
-        color: ghostwhite;
+        color: $white;
         font-size: 1.5rem;
         font-weight: 700;
     }
@@ -41,7 +42,7 @@
         width: 90%;
     
         text-align: center;
-        color: ghostwhite;
+        color: $white;
         font-size: 1rem;
         font-weight: 350;
     }

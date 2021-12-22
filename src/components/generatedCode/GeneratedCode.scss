@@ -1,3 +1,4 @@
+@use '../../styles/utils/variables' as *;
 @use '../../styles/utils/mixins' as *;
 
 
@@ -14,7 +15,7 @@
     &__code {
         width: 100%;
         border-radius: 5px;
-        border: 2px solid #583e82;
+        border: 2px solid $mainColor;
         padding: 0.5rem;
         resize: none;
         text-align: center;
