@@ -17,7 +17,7 @@ const initialValues = {
 
     // Initial values for Glass-Morphism
     glassMorphism_blurFilter: 5,
-    glassMorphism_opacity: 0.075,
+    glassMorphism_opacity: 0.2,
     glassMorphism_border: 2,
     glassMorphism_borderRadius: 10,
     glassMorphism_color: {r: 22, g: 163, b: 211, a:1}

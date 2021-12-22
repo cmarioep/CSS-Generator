@@ -57,6 +57,7 @@
         z-index: 100;
 
         display: flex;
+        justify-content: center;
         flex-direction: column;
 
         width: 95%;
@@ -76,7 +77,7 @@
             position: unset;
             flex-direction: row;
 
-            width: unset;
+            width: 100%;
             height: $navBarHeight;
             margin-bottom: 0;
             padding: 0;
@@ -98,6 +99,7 @@
 
 
             @include mq (intermediate) {
+                width: 15%;
                 margin: 0 0.5rem;
             }
 
@@ -109,11 +111,17 @@
                 border-bottom: 0.5px solid $mainColor;
                 color: $white;
 
-                &:hover {
-                    color: $mainColor;
+                @include mq (intermediate) {
+                    &:hover {
+                        color: $white;
+                    }
                 }
+
+                
             }
+
         }
+        
     }
 
 }
