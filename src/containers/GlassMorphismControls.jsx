@@ -2,7 +2,7 @@ import Slider from '../components/controls/Slider';
 import ColorPicker from '../components/controls/ColorPicker';
 import './InputControls.scss';
 
-function GlassMorphismControls() {
+export function GlassMorphismControls() {
 
   return (
     <div className="inputControls">
@@ -20,4 +20,3 @@ function GlassMorphismControls() {
   );
 }
 
-export default GlassMorphismControls;

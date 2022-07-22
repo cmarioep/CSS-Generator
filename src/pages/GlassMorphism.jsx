@@ -1,6 +1,6 @@
-import Controls from '../containers/Controls';
-import GlassMorphismControls from '../containers/GlassMorphismControls';
-import Viewer from '../containers/Viewer';
+import { Controls, GlassMorphismControls, Viewer } from '../containers';
+
+
 import GlassMorphismPreview from '../components/previews/GlassMorphismPreview';
 import GlassMorphismGeneratedCode from '../components/generatedCode/GlassMorphismGeneratedCode';
 

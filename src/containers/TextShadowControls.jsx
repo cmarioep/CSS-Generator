@@ -2,7 +2,7 @@ import Slider from '../components/controls/Slider';
 import ColorPicker from '../components/controls/ColorPicker';
 import './InputControls.scss';
 
-function TextShadowControls() {
+export function TextShadowControls() {
 
   return (
     <div className="inputControls">
@@ -20,4 +20,4 @@ function TextShadowControls() {
   );
 }
 
-export default TextShadowControls;
+

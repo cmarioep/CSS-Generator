@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Layout from './containers/Layout';
+import { Layout } from './containers';
 
 import { BoxShadow, TextShadow, GlassMorphism } from './pages';
 

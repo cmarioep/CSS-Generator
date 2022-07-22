@@ -2,7 +2,7 @@ import Slider from '../components/controls/Slider';
 import ColorPicker from '../components/controls/ColorPicker';
 import './InputControls.scss';
 
-function BoxShadowControls() {
+export function BoxShadowControls() {
 
   return (
     <div className="inputControls">
@@ -20,5 +20,5 @@ function BoxShadowControls() {
   );
 }
 
-export default BoxShadowControls;
+
 

@@ -1,6 +1,6 @@
 import './Controls.scss';
 
-function Controls(props) {
+export function Controls(props) {
   return (
     <div className="controls">
       {props.children}
@@ -8,4 +8,3 @@ function Controls(props) {
   );
 }
 
-export default Controls;
