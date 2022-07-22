@@ -1,13 +1,13 @@
 import Controls from '../containers/Controls';
 import TextShadowControls from '../containers/TextShadowControls';
 import Viewer from '../containers/Viewer';
-import TextShadowPreview from '../components//previews/TextShadowPreview';
+import TextShadowPreview from '../components/previews/TextShadowPreview';
 import TextShadowGeneratedCode from '../components/generatedCode/TextShadowGeneratedCode';
 
 import './generalLayout.scss';
 
 
-function TextShadow() {
+export function TextShadow() {
     return ( 
         <div className="layout">
             <Controls>
@@ -23,4 +23,3 @@ function TextShadow() {
 }
 
 
-export default TextShadow;

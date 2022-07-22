@@ -1,13 +1,13 @@
 import Controls from '../containers/Controls';
 import GlassMorphismControls from '../containers/GlassMorphismControls';
 import Viewer from '../containers/Viewer';
-import GlassMorphismPreview from '../components//previews/GlassMorphismPreview';
+import GlassMorphismPreview from '../components/previews/GlassMorphismPreview';
 import GlassMorphismGeneratedCode from '../components/generatedCode/GlassMorphismGeneratedCode';
 
 import './generalLayout.scss';
 
 
-function GlassMorphism() {
+export function GlassMorphism() {
     return (
         <div className="layout layout--glassBackground">
             <Controls>
@@ -22,4 +22,3 @@ function GlassMorphism() {
     )
 }
 
-export default GlassMorphism;

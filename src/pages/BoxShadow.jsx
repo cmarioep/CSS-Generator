@@ -7,7 +7,7 @@ import BoxShadowGeneratedCode from '../components/generatedCode/BoxShadowGenerat
 import './generalLayout.scss';
 
 
-function BoxShadow() {
+export function BoxShadow() {
     return (
         <div className="layout">
             <Controls>
@@ -23,4 +23,3 @@ function BoxShadow() {
 }
 
 
-export default BoxShadow;
