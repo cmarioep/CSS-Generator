@@ -4,7 +4,7 @@ import { Controls, GlassMorphismControls, Viewer } from '../containers';
 import GlassMorphismPreview from '../components/previews/GlassMorphismPreview';
 import GlassMorphismGeneratedCode from '../components/generatedCode/GlassMorphismGeneratedCode';
 
-import './generalLayout.scss';
+import '../styles/generalLayout.scss';
 
 
 export function GlassMorphism() {

@@ -1,4 +1,5 @@
-import './Controls.scss';
+import '../styles/containers/Controls.scss';
+
 
 export function Controls(props) {
   return (

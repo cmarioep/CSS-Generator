@@ -1,4 +1,5 @@
-import './Viewer.scss';
+import '../styles/containers/Viewer.scss';
+
 
 export function Viewer(props) {
   return (

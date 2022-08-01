@@ -4,7 +4,7 @@ import { Controls, BoxShadowControls, Viewer } from '../containers';
 import BoxShadowPreview from '../components/previews/BoxShadowPreview';
 import BoxShadowGeneratedCode from '../components/generatedCode/BoxShadowGeneratedCode';
 
-import './generalLayout.scss';
+import '../styles/generalLayout.scss';
 
 
 export function BoxShadow() {

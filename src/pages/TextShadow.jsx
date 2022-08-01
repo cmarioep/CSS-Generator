@@ -4,7 +4,7 @@ import { Controls, TextShadowControls, Viewer } from '../containers';
 import TextShadowPreview from '../components/previews/TextShadowPreview';
 import TextShadowGeneratedCode from '../components/generatedCode/TextShadowGeneratedCode';
 
-import './generalLayout.scss';
+import '../styles/generalLayout.scss';
 
 
 export function TextShadow() {

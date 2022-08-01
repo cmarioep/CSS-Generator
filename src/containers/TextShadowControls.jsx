@@ -1,6 +1,8 @@
 import Slider from '../components/controls/Slider';
 import ColorPicker from '../components/controls/ColorPicker';
-import './InputControls.scss';
+
+import '../styles/containers/InputControls.scss';
+
 
 export function TextShadowControls() {
 
