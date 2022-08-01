@@ -1,10 +1,9 @@
 import { useSelector } from 'react-redux';
 
-import CopyToClipboardButton from '../buttons/CopyToClipboardButton';
+import CopyToClipboardButton from './CopyToClipboardButton';
 
-import '../buttons/CopyToClipboardButton.css';
-import './GeneratedCode.scss';
 
+import '../styles/components/GeneratedCode.scss';
 
 
 const BoxGeneratedCode = () => {

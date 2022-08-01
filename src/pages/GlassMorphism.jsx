@@ -2,7 +2,7 @@ import { Controls, GlassMorphismControls, Viewer } from '../containers';
 
 
 import GlassMorphismPreview from '../components/previews/GlassMorphismPreview';
-import GlassMorphismGeneratedCode from '../components/generatedCode/GlassMorphismGeneratedCode';
+import GlassMorphismGeneratedCode from '../components/GlassMorphismGeneratedCode';
 
 import '../styles/generalLayout.scss';
 

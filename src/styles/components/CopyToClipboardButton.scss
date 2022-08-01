@@ -14,9 +14,9 @@
     font-weight:bold;
     background:linear-gradient(rgba(217, 185, 233, 1), rgba(88, 62, 130, 1));
     cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(rgba(88, 62, 130, 1), rgba(217, 185, 233, 1));
+    }
 }
 
-  
-  .CopyToClipboardButton:hover {
-    background: linear-gradient(rgba(88, 62, 130, 1), rgba(217, 185, 233, 1));
-  }

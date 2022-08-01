@@ -1,6 +1,7 @@
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-import './CopyToClipboardButton.css';
+import '../styles/components/CopyToClipboardButton.scss';
+
 
 function CopyToClipboardButton (props) {
     
