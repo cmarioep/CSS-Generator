@@ -1,6 +1,7 @@
 import {useSelector} from 'react-redux';
 
-import './Previews.scss';
+import '../styles/components/Previewer.scss';
+
 
 function TextShadowPreview() {
 

@@ -1,7 +1,7 @@
 import { Controls, GlassMorphismControls, Viewer } from '../containers';
 
 
-import GlassMorphismPreview from '../components/previews/GlassMorphismPreview';
+import GlassMorphismPreview from '../components/GlassMorphismPreview';
 import GlassMorphismGeneratedCode from '../components/GlassMorphismGeneratedCode';
 
 import '../styles/generalLayout.scss';
