@@ -1,5 +1,5 @@
-import Slider from '../components/controls/Slider';
-import ColorPicker from '../components/controls/ColorPicker';
+import Slider from '../components/Slider';
+import ColorPicker from '../components/ColorPicker';
 
 import '../styles/containers/InputControls.scss';
 

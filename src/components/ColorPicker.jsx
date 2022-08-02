@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { ChromePicker } from 'react-color';
-import { setPropertiesActions } from '../../store/index';
+import { setPropertiesActions } from '../store/index';
 
-import './ColorPicker.scss';
+import '../styles/components/ColorPicker.scss';
 
 
 const ColorPicker = (props) => {

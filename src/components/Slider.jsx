@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { setPropertiesActions } from '../../store/index';
+import { setPropertiesActions } from '../store/index';
 
-import './Slider.scss';
+import '../styles/components/Slider.scss';
+
 
 function Slider(props) {
 
