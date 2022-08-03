@@ -9,7 +9,7 @@ export const useSetBehavior = (label, sliderType) => {
   let maxStep = 1;
 
   let initialState;
-  
+
   const { boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread } = useSelector(state => state);
 
   const { textShadow_xOffset, textShadow_yOffset, textShadow_blur } = useSelector(state => state);
@@ -18,7 +18,7 @@ export const useSetBehavior = (label, sliderType) => {
 
 
   const setBoxShadowProperty = (label) => {
-    
+
     const listOfProperties = {
 
       XOffset: boxShadow_xOffset,
@@ -28,13 +28,15 @@ export const useSetBehavior = (label, sliderType) => {
 
     }
 
-    initialState = listOfProperties[ label ];
+    initialState = listOfProperties[label];
+    
+    if (label === "Blur") minValue = 0;
 
   }
 
 
   const setTextShadowProperty = (label) => {
-    
+
     const listOfProperties = {
 
       XOffset: textShadow_xOffset,
@@ -43,13 +45,15 @@ export const useSetBehavior = (label, sliderType) => {
 
     }
 
-    initialState = listOfProperties[ label ];
+    initialState = listOfProperties[label];
+
+    if (label === "Blur") minValue = 0;
 
   }
 
 
   const setGlassProperty = (label) => {
-    
+
     const listOfProperties = {
 
       Opacity: glassMorphism_opacity,
@@ -59,7 +63,17 @@ export const useSetBehavior = (label, sliderType) => {
 
     }
 
-    initialState = listOfProperties[ label ];
+    initialState = listOfProperties[label];
+    minValue = 0;
+
+    if (label === "Opacity") {      
+      maxValue = 0.5;
+      maxStep = 0.001;
+    }
+
+    if (label === "Blur") maxValue = 20;
+    if (label === "Border") maxValue = 10;
+    if (label === "radius") maxValue = 100;
 
   }
 
@@ -67,26 +81,44 @@ export const useSetBehavior = (label, sliderType) => {
 
   const setInitialState = () => {
 
-    if (sliderType === "boxshadow") {setBoxShadowProperty(label);}
-    if (sliderType === "textshadow") {setTextShadowProperty(label);}
-    if (sliderType === "glassmorphism") {setGlassProperty(label);}
+    if (sliderType === "boxshadow") setBoxShadowProperty(label);
+    if (sliderType === "textshadow") setTextShadowProperty(label);
+    if (sliderType === "glassmorphism") setGlassProperty(label);
 
   }
 
   setInitialState();
+  
+
+  if (sliderType === "boxshadow") {
+
+    return {
+      boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread,
+      minValue, maxValue, maxStep,
+      initialState,
+    };
+
+  }
+
+  if (sliderType === "textshadow") {
+
+    return {
+      textShadow_xOffset, textShadow_yOffset, textShadow_blur,
+      minValue, maxValue, maxStep,
+      initialState,
+    };
+
+  }
+
+  if (sliderType === "glassmorphism") {
+
+    return {
+      glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius,
+      minValue, maxValue, maxStep,
+      initialState,
+    };
+
+  }
 
 
-  return {
-
-    boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread,
-
-    textShadow_xOffset, textShadow_yOffset, textShadow_blur,
-
-    glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius,
-
-    minValue, maxValue, maxStep,
-
-    initialState,
-    
-  };
 }
