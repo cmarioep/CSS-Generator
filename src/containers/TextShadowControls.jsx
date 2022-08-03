@@ -9,9 +9,9 @@ export function TextShadowControls() {
   return (
     <div className="inputControls">
       <div className="inputControls__slider">
-        <Slider sliderType="text-shadow" label="X-Offset" />
-        <Slider sliderType="text-shadow" label="Y-Offset" />
-        <Slider sliderType="text-shadow" label="Blur" />
+        <Slider sliderType="textshadow" label="XOffset" />
+        <Slider sliderType="textshadow" label="YOffset" />
+        <Slider sliderType="textshadow" label="Blur" />
       </div>
       <hr/>
       <div className="inputControls__colorPicker">

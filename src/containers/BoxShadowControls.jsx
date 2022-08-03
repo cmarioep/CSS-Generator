@@ -9,10 +9,10 @@ export function BoxShadowControls() {
   return (
     <div className="inputControls">
       <div className="inputControls__slider">
-        <Slider sliderType="box-shadow" label="X-Offset" />
-        <Slider sliderType="box-shadow" label="Y-Offset" />
-        <Slider sliderType="box-shadow" label="Blur" />
-        <Slider sliderType="box-shadow" label="Spread" />
+        <Slider sliderType="boxshadow" label="XOffset" />
+        <Slider sliderType="boxshadow" label="YOffset" />
+        <Slider sliderType="boxshadow" label="Blur" />
+        <Slider sliderType="boxshadow" label="Spread" />
       </div>
       <hr/>
       <div className="inputControls__colorPicker">

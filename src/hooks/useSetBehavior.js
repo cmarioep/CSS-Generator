@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPropertiesActions } from '../store/index';
 
-export const useSetBehavior = () => {
+export const useSetBehavior = (label, sliderType) => {
 
   let minValue = -200;
   let maxValue = 200;
@@ -18,70 +18,67 @@ export const useSetBehavior = () => {
   const { opacity, blurFilter, border, borderRadius } = useSelector(state => state);
 
 
-  const setInitialState = (label, sliderType) => {
+  const setBoxShadowProperty = (label) => {
+    
+    const listOfProperties = {
 
-    // Conditional state for box-shadow properties
+      XOffset: boxShadow_xOffset,
+      YOffset: boxShadow_yOffset,
+      Blur: boxShadow_blur,
+      Spread: boxShadow_spread,
 
-    if (label === 'X-Offset' && sliderType === "box-shadow") {
-      initialState = boxShadow_xOffset;
     }
 
-    if (label === 'Y-Offset' && sliderType === "box-shadow") {
-      initialState = boxShadow_yOffset;
-    }
-
-    if (label === 'Blur' && sliderType === "box-shadow") {
-      initialState = boxShadow_blur;
-      minValue = 0;
-    }
-
-    if (label === 'Spread' && sliderType === "box-shadow") {
-      initialState = boxShadow_spread;
-    }
-
-
-    // Conditional state for text-shadow properties
-
-    if (label === 'X-Offset' && sliderType === "text-shadow") {
-      initialState = textShadow_xOffset;
-    }
-
-    if (label === 'Y-Offset' && sliderType === "text-shadow") {
-      initialState = textShadow_yOffset;
-    }
-
-    if (label === 'Blur' && sliderType === "text-shadow") {
-      initialState = textShadow_blur;
-      minValue = 0;
-    }
-
-    // Conditional state for glass morphism properties
-
-    if (label === 'Opacity' && sliderType === "glass-morphism") {
-      initialState = opacity;
-      minValue = 0;
-      maxValue = 0.5;
-      maxStep = 0.001;
-    }
-
-    if (label === 'Blur' && sliderType === "glass-morphism") {
-      initialState = blurFilter;
-      minValue = 0;
-      maxValue = 20;
-    }
-    if (label === 'Border' && sliderType === "glass-morphism") {
-      initialState = border;
-      minValue = 0;
-      maxValue = 10;
-    }
-
-    if (label === 'Border radius' && sliderType === "glass-morphism") {
-      initialState = borderRadius;
-      minValue = 0;
-      maxValue = 100;
-    }
+    initialState = listOfProperties[ label ];
+    console.log(initialState)
 
   }
+
+
+  const setTextShadowProperty = (label) => {
+    
+    const listOfProperties = {
+
+      XOffset: textShadow_xOffset,
+      YOffset: textShadow_yOffset,
+      Blur: textShadow_blur,
+
+    }
+
+    initialState = listOfProperties[ label ];
+    console.log(initialState)
+
+  }
+
+
+  const setGlassProperty = (label) => {
+    
+    const listOfProperties = {
+
+      Opacity: opacity,
+      Blur: blurFilter,
+      Border: border,
+      radius: borderRadius,
+
+    }
+
+    initialState = listOfProperties[ label ];
+    console.log(initialState)
+
+  }
+
+
+
+  const setInitialState = () => {
+
+    if (sliderType === "boxshadow") {setBoxShadowProperty(label);}
+    if (sliderType === "textshadow") {setTextShadowProperty(label);}
+    if (sliderType === "glassmorphism") {setGlassProperty(label);}
+
+  }
+
+  setInitialState();
+
 
   return {
 
@@ -94,8 +91,6 @@ export const useSetBehavior = () => {
     minValue, maxValue, maxStep,
 
     initialState,
-    setInitialState
-
-
+    
   };
 }

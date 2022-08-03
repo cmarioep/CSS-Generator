@@ -9,10 +9,10 @@ export function GlassMorphismControls() {
   return (
     <div className="inputControls">
       <div className="inputControls__slider">
-        <Slider sliderType="glass-morphism" label="Opacity" />
-        <Slider sliderType="glass-morphism" label="Blur" />
-        <Slider sliderType="glass-morphism" label="Border" />
-        <Slider sliderType="glass-morphism" label="Border radius" />
+        <Slider sliderType="glassmorphism" label="Opacity" />
+        <Slider sliderType="glassmorphism" label="Blur" />
+        <Slider sliderType="glassmorphism" label="Border" />
+        <Slider sliderType="glassmorphism" label="radius" />
       </div>
       <hr/>
       <div className="inputControls__colorPicker">
