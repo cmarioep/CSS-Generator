@@ -5,7 +5,7 @@ import { setPropertiesActions } from '../store/index';
 import '../styles/components/Slider.scss';
 
 
-function Slider(props) {
+function Slider( { label, sliderType } ) {
 
   let minValue = -200;
   let maxValue = 200;
@@ -14,19 +14,12 @@ function Slider(props) {
   const dispatch = useDispatch();
 
   let initialState;
-  const boxShadow_xOffset = useSelector(state => state.boxShadow_xOffset);
-  const boxShadow_yOffset = useSelector(state => state.boxShadow_yOffset);
-  const boxShadow_blur = useSelector(state => state.boxShadow_blur);
-  const boxShadow_spread = useSelector(state => state.boxShadow_spread);
 
-  const textShadow_xOffset = useSelector(state => state.textShadow_xOffset);
-  const textShadow_yOffset = useSelector(state => state.textShadow_yOffset);
-  const textShadow_blur = useSelector(state => state.textShadow_blur);
+  const { boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread} = useSelector(state => state);
 
-  const opacity = useSelector(state => state.glassMorphism_opacity);
-  const blurFilter = useSelector(state => state.glassMorphism_blurFilter);
-  const border = useSelector(state => state.glassMorphism_border);
-  const borderRadius = useSelector(state => state.glassMorphism_borderRadius);
+  const { textShadow_xOffset, textShadow_yOffset, textShadow_blur } = useSelector(state => state);
+
+  const { opacity, blurFilter, border, borderRadius } = useSelector(state => state);
 
 
 
@@ -34,60 +27,60 @@ function Slider(props) {
 
     // Conditional state for box-shadow properties
 
-    if (props.label === 'X-Offset' && props.sliderType === "box-shadow") {
+    if (label === 'X-Offset' && sliderType === "box-shadow") {
       initialState = boxShadow_xOffset;
     }
 
-    if (props.label === 'Y-Offset' && props.sliderType === "box-shadow") {
+    if (label === 'Y-Offset' && sliderType === "box-shadow") {
       initialState = boxShadow_yOffset;
     }
 
-    if (props.label === 'Blur' && props.sliderType === "box-shadow") {
+    if (label === 'Blur' && sliderType === "box-shadow") {
       initialState = boxShadow_blur;
       minValue = 0;
     }
 
-    if (props.label === 'Spread' && props.sliderType === "box-shadow") {
+    if (label === 'Spread' && sliderType === "box-shadow") {
       initialState = boxShadow_spread;
     }
 
 
     // Conditional state for text-shadow properties
 
-    if (props.label === 'X-Offset' && props.sliderType === "text-shadow") {
+    if (label === 'X-Offset' && sliderType === "text-shadow") {
       initialState = textShadow_xOffset;
     }
 
-    if (props.label === 'Y-Offset' && props.sliderType === "text-shadow") {
+    if (label === 'Y-Offset' && sliderType === "text-shadow") {
       initialState = textShadow_yOffset;
     }
 
-    if (props.label === 'Blur' && props.sliderType === "text-shadow") {
+    if (label === 'Blur' && sliderType === "text-shadow") {
       initialState = textShadow_blur;
       minValue = 0;
     }
 
     // Conditional state for glass morphism properties
     
-    if (props.label === 'Opacity' && props.sliderType === "glass-morphism") {
+    if (label === 'Opacity' && sliderType === "glass-morphism") {
       initialState = opacity;
       minValue = 0;
       maxValue = 0.5;
       maxStep = 0.001;
     }
     
-    if (props.label === 'Blur' && props.sliderType === "glass-morphism") {
+    if (label === 'Blur' && sliderType === "glass-morphism") {
       initialState = blurFilter;
       minValue = 0;
       maxValue = 20;
     }
-    if (props.label === 'Border' && props.sliderType === "glass-morphism") {
+    if (label === 'Border' && sliderType === "glass-morphism") {
       initialState = border;
       minValue = 0;
       maxValue = 10;
     }
 
-    if (props.label === 'Border radius' && props.sliderType === "glass-morphism") {
+    if (label === 'Border radius' && sliderType === "glass-morphism") {
       initialState = borderRadius;
       minValue = 0;
       maxValue = 100;
@@ -178,50 +171,49 @@ function Slider(props) {
 
     // Conditional actions for box-shadow properties
 
-    if (props.label === 'X-Offset' && props.sliderType === "box-shadow") {
+    if (label === 'X-Offset' && sliderType === "box-shadow") {
       setXHandler__boxShadow(event);
     }
 
-    if (props.label === 'Y-Offset' && props.sliderType === "box-shadow") {
+    if (label === 'Y-Offset' && sliderType === "box-shadow") {
       setYHandler__boxShadow(event);
     }
 
-    if (props.label === 'Blur' && props.sliderType === "box-shadow") {
+    if (label === 'Blur' && sliderType === "box-shadow") {
       setBlurHandler__boxShadow(event);
     }
 
-    if (props.label === 'Spread' && props.sliderType === "box-shadow") {
+    if (label === 'Spread' && sliderType === "box-shadow") {
       setSpreadHandler__boxShadow(event);
     }
 
-    // Conditional actions for text-shadow properties
-
-    if (props.label === 'X-Offset' && props.sliderType === "text-shadow") {
+    // Conditional actions for text-shadow prope
+    if (label === 'X-Offset' && sliderType === "text-shadow") {
       setXHandler__textShadow(event);
     }
 
-    if (props.label === 'Y-Offset' && props.sliderType === "text-shadow") {
+    if (label === 'Y-Offset' && sliderType === "text-shadow") {
       setYHandler__textShadow(event);
     }
 
-    if (props.label === 'Blur' && props.sliderType === "text-shadow") {
+    if (label === 'Blur' && sliderType === "text-shadow") {
       setBlurHandler__textShadow(event);
     }
 
     // Conditional state for glass morphism properties
 
-    if (props.label === 'Opacity' && props.sliderType === "glass-morphism") {
+    if (label === 'Opacity' && sliderType === "glass-morphism") {
       setOpacityHandler__glassMorphism(event);
     }
     
-    if (props.label === 'Blur' && props.sliderType === "glass-morphism") {
+    if (label === 'Blur' && sliderType === "glass-morphism") {
       setBackdropFilterHandler__glassMorphism(event);
     }
-    if (props.label === 'Border' && props.sliderType === "glass-morphism") {
+    if (label === 'Border' && sliderType === "glass-morphism") {
       setBorderHandler__glassMorphism(event);
     }
 
-    if (props.label === 'Border radius' && props.sliderType === "glass-morphism") {
+    if (label === 'Border radius' && sliderType === "glass-morphism") {
       setBorderRadiusHandler__glassMorphism(event);
     }
 
@@ -230,7 +222,7 @@ function Slider(props) {
 
   return (
     <div className="slider">
-      <span className="slider__label">{props.label}:</span>
+      <span className="slider__label"> {label}: </span>
       <input type="range" className="slider__range" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
       <input type="number" className="slider__number" min={minValue} max={maxValue} step={maxStep} value={localState} onChange={setAction} />
     </div>
