@@ -14,7 +14,7 @@ function Slider( { label, sliderType } ) {
 
   const { boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread, textShadow_xOffset, textShadow_yOffset, textShadow_blur, 
   
-    opacity, blurFilter, border, borderRadius, minValue, maxValue, maxStep, initialState } = useSetBehavior(label, sliderType);
+    glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius, minValue, maxValue, maxStep, initialState } = useSetBehavior(label, sliderType);
   
 
 

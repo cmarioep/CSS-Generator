@@ -9,13 +9,12 @@ export const useSetBehavior = (label, sliderType) => {
   let maxStep = 1;
 
   let initialState;
-
-
+  
   const { boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread } = useSelector(state => state);
 
   const { textShadow_xOffset, textShadow_yOffset, textShadow_blur } = useSelector(state => state);
 
-  const { opacity, blurFilter, border, borderRadius } = useSelector(state => state);
+  const { glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius } = useSelector(state => state);
 
 
   const setBoxShadowProperty = (label) => {
@@ -30,7 +29,6 @@ export const useSetBehavior = (label, sliderType) => {
     }
 
     initialState = listOfProperties[ label ];
-    console.log(initialState)
 
   }
 
@@ -46,7 +44,6 @@ export const useSetBehavior = (label, sliderType) => {
     }
 
     initialState = listOfProperties[ label ];
-    console.log(initialState)
 
   }
 
@@ -55,15 +52,14 @@ export const useSetBehavior = (label, sliderType) => {
     
     const listOfProperties = {
 
-      Opacity: opacity,
-      Blur: blurFilter,
-      Border: border,
-      radius: borderRadius,
+      Opacity: glassMorphism_opacity,
+      Blur: glassMorphism_blurFilter,
+      Border: glassMorphism_border,
+      radius: glassMorphism_borderRadius,
 
     }
 
     initialState = listOfProperties[ label ];
-    console.log(initialState)
 
   }
 
@@ -86,7 +82,7 @@ export const useSetBehavior = (label, sliderType) => {
 
     textShadow_xOffset, textShadow_yOffset, textShadow_blur,
 
-    opacity, blurFilter, border, borderRadius,
+    glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius,
 
     minValue, maxValue, maxStep,
 
