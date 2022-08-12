@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+
+
 import '../styles/components/Header.scss';
+
 
 
 function Header() {
@@ -14,9 +18,9 @@ function Header() {
             <input className="navBar__button" id="menu__button" type="checkbox" />
 
             <ul className='navBar__menu'>
-                <li className='navBar__menu__item'><a href="/">Box Shadow</a></li>
-                <li className='navBar__menu__item'><a href="/text-shadow">Text Shadow</a></li>
-                <li className='navBar__menu__item'><a href="/glass">Glass Morphism</a></li>
+                <Link className='navBar__menu__item' to="/" >Box Shadow</Link>
+                <Link className='navBar__menu__item' to="/text-shadow" >Text Shadow</Link>
+                <Link className='navBar__menu__item' to="/glass" >Glass Morphism</Link>
             </ul>
 
         </nav>
