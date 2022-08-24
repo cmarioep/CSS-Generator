@@ -12,10 +12,13 @@ export const useSliderBehavior = (label, sliderType) => {
   let initialState;
   
   // *** Redux global state for all properties ***
+
   // Global values for box-shadow properties
   const { boxShadow_xOffset, boxShadow_yOffset, boxShadow_blur, boxShadow_spread } = useSelector(state => state);
+
   // Global values for text-shadow properties
   const { textShadow_xOffset, textShadow_yOffset, textShadow_blur } = useSelector(state => state);
+  
   // Global values for glass morphism properties
   const { glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius } = useSelector(state => state);
 

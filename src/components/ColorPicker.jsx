@@ -10,38 +10,6 @@ const ColorPicker = (props) => {
 
     const dispatch = useDispatch();
 
-    let initialState;
-    const boxShadow_color = useSelector(state => state.boxShadow_color);
-    const textShadow_textColor = useSelector(state => state.textShadow_textColor);
-    const textShadow_shadowColor = useSelector(state => state.textShadow_shadowColor);
-    const glassMorphism_color = useSelector(state => state.glassMorphism_color);
-
-
-    const setInitialState = () => {
-
-        // Conditional state for box-shadow color
-
-        if (props.colorPickerType === "box-shadow") {
-            initialState = boxShadow_color;
-        }
-
-        // Conditional state for text-shadow color
-        if (props.colorPickerType === "text-color") {
-            initialState = textShadow_textColor;
-        }
-
-        if (props.colorPickerType === "text-shadow") {
-            initialState = textShadow_shadowColor;
-        }
-
-        // Conditional state for glass background-color
-        if (props.colorPickerType === "glass-morphism") {
-            initialState = glassMorphism_color;
-        }
-
-    }
-
-    setInitialState();
 
 
     const [localState, setlocalState] = useState(initialState);
