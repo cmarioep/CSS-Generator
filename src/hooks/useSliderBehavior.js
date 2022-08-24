@@ -11,6 +11,7 @@ export const useSliderBehavior = (label, sliderType) => {
 
   let initialState;
   
+  
   // *** Redux global state for all properties ***
 
   // Global values for box-shadow properties
@@ -18,13 +19,13 @@ export const useSliderBehavior = (label, sliderType) => {
 
   // Global values for text-shadow properties
   const { textShadow_xOffset, textShadow_yOffset, textShadow_blur } = useSelector(state => state);
-  
+
   // Global values for glass morphism properties
   const { glassMorphism_opacity, glassMorphism_blurFilter, glassMorphism_border, glassMorphism_borderRadius } = useSelector(state => state);
 
   
 
-  // Aux function to set initial values on box-shadow property control according to label prop
+  // *** Aux function to set initial values on box-shadow property control according to label prop ***
   const setBoxShadowProperty = (label) => {
 
     const listOfProperties = {
@@ -43,7 +44,7 @@ export const useSliderBehavior = (label, sliderType) => {
   }
 
 
-  // Aux function to set initial values on text-shadow property control according to label prop
+  // *** Aux function to set initial values on text-shadow property control according to label prop ***
   const setTextShadowProperty = (label) => {
 
     const listOfProperties = {
@@ -61,7 +62,7 @@ export const useSliderBehavior = (label, sliderType) => {
   }
 
 
-  // Aux function to set initial values on glass morphism property control according to label prop
+  // *** Aux function to set initial values on glass morphism property control according to label prop ***
   const setGlassProperty = (label) => {
 
     const listOfProperties = {
@@ -88,7 +89,7 @@ export const useSliderBehavior = (label, sliderType) => {
   }
 
 
-  // Set initial state for slider according to sliderType prop
+  // *** Set initial state for slider according to sliderType prop ***
   const setInitialState = () => {
 
     if (sliderType === "boxshadow") setBoxShadowProperty(label);

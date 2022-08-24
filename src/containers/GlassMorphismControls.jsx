@@ -16,7 +16,7 @@ export function GlassMorphismControls() {
       </div>
       <hr/>
       <div className="inputControls__colorPicker">
-        <ColorPicker colorPickerType="glass-morphism" label="Glass color" />
+        <ColorPicker colorPickerType="glassmorphism" label="Glass color" />
       </div>
     </div>
   );

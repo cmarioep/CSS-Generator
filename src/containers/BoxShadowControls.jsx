@@ -16,7 +16,7 @@ export function BoxShadowControls() {
       </div>
       <hr/>
       <div className="inputControls__colorPicker">
-        <ColorPicker colorPickerType="box-shadow" label="Shadow Color" />
+        <ColorPicker colorPickerType="boxshadow" label="Shadow Color" />
       </div>
     </div>
   );

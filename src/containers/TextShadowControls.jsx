@@ -15,8 +15,8 @@ export function TextShadowControls() {
       </div>
       <hr/>
       <div className="inputControls__colorPicker">
-        <ColorPicker colorPickerType="text-color" label="Text Color" />
-        <ColorPicker colorPickerType="text-shadow" label="Shadow Color" />
+        <ColorPicker colorPickerType="textcolor" label="Text Color" />
+        <ColorPicker colorPickerType="textshadow" label="Shadow Color" />
       </div>
     </div>
   );
