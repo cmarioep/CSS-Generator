@@ -42,7 +42,8 @@ const ColorPicker = ({label, colorPickerType}) => {
             // Cleanup the event listener
             document.removeEventListener('click', clickOutsideHandler);
         };
-    });
+        
+    }, []);
 
     
 
