@@ -11,7 +11,8 @@
     height: 100vh;
     padding-bottom: $navBarHeight;
  
-    background-image: linear-gradient(to bottom, #845ec2, #a77ed0, #c6a1de, #e2c5ee, #fbeaff);
+    background-color: #f2f0f3;
+    // background-image: linear-gradient(to bottom, hsl(263, 45%, 56%), #a77ed0, #c6a1de, #e2c5ee, #fbeaff);
     
     @include mq(intermediate) {
         padding: $navBarHeight 0 0;

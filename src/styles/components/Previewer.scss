@@ -5,7 +5,8 @@
 .boxShadow {
     width: 50%;
     aspect-ratio: 4/3;
-    border: 0.5px solid #6f6b76;
+    border: 0.5px solid rgba(111, 107, 118, 0.3);
+    border-radius: 2rem;
     background-color: $white;
 
     @include mq(intermediate) {
@@ -16,6 +17,7 @@
 
 .texShadow {
     font-size: 6rem;
+    color: $white;
 }
 
 

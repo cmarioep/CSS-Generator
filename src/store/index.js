@@ -2,18 +2,18 @@ import { createSlice, configureStore } from '@reduxjs/toolkit';
 
 const initialValues = {
     // Initial values for box-shadow
-    boxShadow_xOffset: -10,
-    boxShadow_yOffset: 10,
-    boxShadow_blur: 0,
-    boxShadow_spread: 0,
-    boxShadow_color: {r: 59, g: 57, b: 57, a:1},
+    boxShadow_xOffset: 0,
+    boxShadow_yOffset: 8,
+    boxShadow_blur: 5,
+    boxShadow_spread: -5,
+    boxShadow_color: {r: 59, g: 57, b: 57, a:0.5},
 
     // Initial values for text-shadow
-    textShadow_textColor: {r: 0, g: 0, b: 0, a:1},
-    textShadow_xOffset: -4,
-    textShadow_yOffset: 4,
-    textShadow_blur: 2,
-    textShadow_shadowColor: {r: 219, g: 100, b: 100, a:1},
+    textShadow_textColor: {r: 255, g: 255, b: 255, a:1},
+    textShadow_xOffset: 0,
+    textShadow_yOffset: 2,
+    textShadow_blur: 10,
+    textShadow_shadowColor: {r: 0, g: 91, b: 74, a:1},
 
     // Initial values for Glass-Morphism
     glassMorphism_blurFilter: 5,
