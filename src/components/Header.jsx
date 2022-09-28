@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 import '../styles/components/Header.scss';
@@ -18,9 +18,9 @@ function Header() {
             <input className="navBar__button" id="menu__button" type="checkbox" />
 
             <ul className='navBar__menu'>
-                <Link className='navBar__menu__item' to="/" >Box Shadow</Link>
-                <Link className='navBar__menu__item' to="/text-shadow" >Text Shadow</Link>
-                <Link className='navBar__menu__item' to="/glass" >Glass Morphism</Link>
+                <NavLink className={({ isActive }) => `navBar__menu__item ${ isActive ? 'navBar__menu__item--isActive' : ''}`} to="/" >Box Shadow</NavLink>
+                <NavLink className={({ isActive }) => `navBar__menu__item ${ isActive ? 'navBar__menu__item--isActive' : ''}`} to="/text-shadow" >Text Shadow</NavLink>
+                <NavLink className={({ isActive }) => `navBar__menu__item ${ isActive ? 'navBar__menu__item--isActive' : ''}`} to="/glass" >Glass Morphism</NavLink>
             </ul>
 
         </nav>

@@ -15,7 +15,7 @@
     height: $navBarHeight;
     
     background-color: $mainColor;
-    box-shadow: 0px 1px 5px 0px rgba(75, 68, 83, 1);
+    
 
     @include mq(intermediate) {
         top: 0;
@@ -93,10 +93,14 @@
             align-items: center;
         
             text-align: center;
-            font-size: 1.5rem;
-            font-weight: 500;
+            font-size: 1.8rem;
+            font-weight: 700;
             text-decoration: none;
-            text-shadow: 0px 2px 10px rgba(0,91,74,1);
+
+                       
+            &--isActive{
+                border-bottom: 5px solid #00C9A7;
+            }
 
 
             @include mq (intermediate) {
