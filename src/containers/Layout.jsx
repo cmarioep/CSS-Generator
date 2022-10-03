@@ -1,9 +1,9 @@
-import Header from '../components/Header';
+import NavBar from '../components/NavBar';
 
 export const Layout = ({children}) => {
     return(
         <div>
-            <Header />
+            <NavBar />
             {children}
         </div>
     );

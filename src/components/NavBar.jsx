@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 
 
-import '../styles/components/Header.scss';
+import '../styles/components/NavBar.scss';
 
 
 
-function Header() {
+function NavBar() {
     return (
         <nav className='navBar'>
 
@@ -27,4 +27,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default NavBar;
