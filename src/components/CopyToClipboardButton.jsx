@@ -1,16 +1,24 @@
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Swal from 'sweetalert2';
 
 import '../styles/components/CopyToClipboardButton.scss';
 
 
-function CopyToClipboardButton (props) {
+function CopyToClipboardButton ({toCopy}) {
     
     const onCopyText = () => {
-        alert("Generated Code was copy to Clipboard");
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            iconColor: '#583e82',
+            title: 'Generated code was copy to Clipboard',
+            showConfirmButton: false,
+            timer: 2000
+          })
     };
 
     return ( 
-        <CopyToClipboard text={props.toCopy} onCopy={onCopyText}>
+        <CopyToClipboard text={toCopy} onCopy={onCopyText}>
             <button className="CopyToClipboardButton">Copy to Clipboard</button>
         </CopyToClipboard>
      );
