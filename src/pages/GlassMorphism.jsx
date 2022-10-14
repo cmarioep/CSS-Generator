@@ -9,7 +9,7 @@ import '../styles/generalLayout.scss';
 
 export function GlassMorphism() {
     return (
-        <div className="layout layout--glassBackground">
+        <div className="layout">
             <Controls>
                 <GlassMorphismControls />
             </Controls>
