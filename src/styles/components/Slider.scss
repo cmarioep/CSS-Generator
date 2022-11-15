@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use '../utils/' as *;
 
 .slider {
     display: flex;
@@ -11,12 +11,12 @@
 
     &__label {
         width: 25%;
-        color: $white;
+        color: $clr--white;
         font-weight: 700;
-        text-shadow: 0px 2px 5px rgb(68, 58, 70);
+        text-shadow: 0px 2px 5px $clr--shadow;
     }
 
-    
+
     &__range {
         width: 60%;
         margin: 0 1rem;
@@ -27,11 +27,8 @@
     &__number {
         width: 3.5rem;
         height: 1.5rem;
-        border: 0.5px solid #3D3535;
+        border: 0.5px solid $clr--gray;
         border-radius: 2.5px;
         text-align: center;
     }
 }
-
-
-

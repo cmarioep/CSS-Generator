@@ -1,5 +1,4 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use '../utils/' as *;
 
 
 .navBar {
@@ -14,7 +13,7 @@
     width: 100%;
     height: $navBarHeight;
 
-    background-color: $mainColor;
+    background-color: $clr--main;
 
 
     @include mq(intermediate) {
@@ -40,7 +39,7 @@
         svg {
             width: 100%;
             height: 100%;
-            fill: $white;
+            fill: $clr--white;
         }
 
         &:hover {
@@ -62,11 +61,10 @@
 
         width: 95%;
         height: 25vh;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        // outline: 2px solid $mainColor;
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
 
-        background-color: #a77ed0;
+        background-color: $clr--main--light;
 
         transform: translateX(-50%);
         transition: transform 0.5s ease-in-out;
@@ -74,8 +72,8 @@
         overflow-y: auto;
 
         :nth-child(even) {
-            border-top: 0.5px solid #00C9A7;
-            border-bottom: 0.5px solid #00C9A7;
+            border-top: 0.5px solid $clr--aqua;
+            border-bottom: 0.5px solid $clr--aqua;
 
             @include mq (intermediate) {
                 border: 0;
@@ -109,11 +107,11 @@
             font-size: 1.8rem;
             font-weight: 700;
             text-decoration: none;
-            
 
-            &--isActive {              
-                text-shadow: 0px 2px 5px rgba(0, 91, 74, 1);
-                color: hsl(171, 100%, 98%);
+
+            &--isActive {
+                text-shadow: 0px 2px 2px $clr--aqua;
+                color: $clr--white;
             }
 
 
@@ -126,14 +124,14 @@
             a {
                 width: 95%;
                 padding: 0.5rem;
-                border-top: 0.5px solid $mainColor;
-                border-bottom: 0.5px solid $mainColor;
-                color: $white;
+                border-top: 0.5px solid $clr--main;
+                border-bottom: 0.5px solid $clr--main;
+                color: $clr--white;
 
 
                 @include mq (intermediate) {
                     &:hover {
-                        color: $white;
+                        color: $clr--white;
                     }
                 }
 
@@ -149,5 +147,4 @@
 #menu__button:checked~.navBar__menu {
     transform: translate(-50%, calc(-100% - $navBarHeight));
     transition: transform 0.5s ease-in-out;
-    background-color: color(dark, dark);
 }

@@ -1,13 +1,12 @@
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use '../utils/' as *;
 
 
 .boxShadow {
     width: 50%;
     aspect-ratio: 4/3;
-    border: 0.5px solid rgba(111, 107, 118, 0.3);
-    border-radius: 2rem;
-    background-color: $white;
+    border: 0.5px solid $clr--shadow;
+    border-radius: $radius;
+    background-color: $clr--white;
 
     @include mq(intermediate) {
         width: 40%;
@@ -17,7 +16,7 @@
 
 .texShadow {
     font-size: 6rem;
-    color: $white;
+    color: $clr--white;
 }
 
 
@@ -32,7 +31,6 @@
     width: 90%;
     aspect-ratio: 16/10;
 
-    // background-image: url(../../assets/img/2_1_200x.jpg);
 
 
     @include mq(intermediate) {
@@ -51,12 +49,12 @@
         position: relative;
         z-index: 10;
 
-        color: $white;
+        color: $clr--white;
         font-size: 1.5rem;
         font-weight: 700;
 
     }
-    
+
 
     &__text {
         position: relative;
@@ -65,7 +63,7 @@
         width: 90%;
 
         text-align: center;
-        color: $white;
+        color: $clr--white;
         font-size: 1rem;
         font-weight: 350;
     }

@@ -1,22 +1,21 @@
-
-@use '../utils/variables' as *;
-@use '../utils/mixins' as *;
+@use '../utils/' as *;
 
 
 .generatedCode {
     width: 90%;
     margin: 1.5rem;
-    // border: 1px solid red;
+
 
     @include mq(intermediate) {
         width: 60%;
         margin: 4rem;
     }
 
+
     &__code {
         width: 100%;
-        border-radius: 5px;
-        border: 2px solid $mainColor;
+        border-radius: $radius;
+        border: 2px solid $clr--main;
         padding: 0.5rem;
         resize: none;
         text-align: center;
