@@ -21,13 +21,15 @@
         text-align: center;
 
         &--texarea {
-            width: 100%;
-            resize: none;
-            text-align: left;
-
-            @include mq(medium) {
+            display: none;
+  
+            @include mq(intermediate) {
+                display: initial;
                 width: 100%;
+                resize: none;
+                text-align: left;
             }
+
         }
     }
 }
