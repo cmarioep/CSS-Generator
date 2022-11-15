@@ -42,6 +42,14 @@
             fill: $clr--white;
         }
 
+        &--menu {
+            animation: rotateIn  0.5s both;
+        }
+
+        &--close {
+            display: none;
+        }
+
         &:hover {
             cursor: pointer;
         }
@@ -147,4 +155,31 @@
 #menu__button:checked~.navBar__menu {
     transform: translate(-50%, calc(-100% - $navBarHeight));
     transition: transform 0.5s ease-in-out;
+}
+
+#menu__button:checked~.navBar__icon>.navBar__icon--menu {
+    display: none;
+}
+
+
+#menu__button:checked~.navBar__icon>.navBar__icon--close {
+    display: initial;
+    animation: rotateIn 0.5s both;
+}
+
+
+// Animations for menu icon
+
+@keyframes rotateIn {
+    0% {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0
+    }
+
+    100% {
+        transform-origin: center;
+        transform: none;
+        opacity: 1
+    }
 }
