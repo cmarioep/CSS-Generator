@@ -13,23 +13,21 @@
 
 
     &__code {
+        display: none;
         width: 100%;
         border-radius: $radius;
         border: 2px solid $clr--main;
         padding: 0.5rem;
-        resize: none;
         text-align: center;
+        resize: none;
+
+
+        @include mq(intermediate) {
+            display: initial;
+        }
 
         &--texarea {
-            display: none;
-  
-            @include mq(intermediate) {
-                display: initial;
-                width: 100%;
-                resize: none;
-                text-align: left;
-            }
-
+            text-align: left;
         }
     }
 }

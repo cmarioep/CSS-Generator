@@ -2,14 +2,14 @@
 
 
 .boxShadow {
-    width: 50%;
+    width: 90%;
     aspect-ratio: 4/3;
     border: 0.5px solid $clr--shadow;
     border-radius: $radius;
     background-color: $clr--white;
 
     @include mq(intermediate) {
-        width: 40%;
+        width: 60%;
     }
 }
 
