@@ -7,11 +7,8 @@
 </div>
 
 <hr>
+
 CSS code generator that provides visual help to obtain the desired effect, works for Box-shadow, ext-shadow and Glass Morphism.
-<br>
-Built with vite using React, Redux Toolkit and custom styles with Sass.
-
-
 
 ## Installation Running for Development
 
